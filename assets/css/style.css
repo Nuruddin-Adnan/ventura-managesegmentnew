@@ -1,0 +1,205 @@
+/*=== abstracts css start === */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+/*===// end of abstracts css === */
+/*=== base css start === */
+@import url(../abstracts/_mixins.scss);
+@import url(../abstracts/_mixins.scss);
+@import url(../abstracts/_mixins.scss);
+@import url(../abstracts/_mixins.scss);
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::after, ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, ol, ul, p, address, strong, i {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+}
+
+.bg-orange {
+  background-color: #ff4106;
+}
+
+/*===// end of base css === */
+/*=== components css start === */
+.btn-tilt {
+  background: #016388;
+  color: #fff;
+}
+
+.btn-tilt:hover {
+  color: #fff;
+  background: #01516f;
+}
+
+.btn-red {
+  background: #f21703;
+  color: #fff;
+}
+
+.btn-red:hover {
+  color: #fff;
+  background: #d91503;
+}
+
+.main-content--heading {
+  font-size: 36px;
+  font-weight: 300;
+  color: #ff4106;
+}
+
+#segments.accordion .accordion-item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#segments.accordion .accordion-button {
+  font-size: 18px;
+  font-weight: 300;
+  color: black;
+  background-color: #f8f7fd;
+}
+
+#segments.accordion .accordion-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#segments.accordion .accordion-button .badge {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 300;
+  color: #fff;
+}
+
+#segments.accordion .accordion-button .badge.disabled {
+  background-color: #827877;
+}
+
+.panel {
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  background-color: #e5e5e5;
+  border-left: 2px solid #ff4106;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+}
+
+/*===// end of components css === */
+/*=== layouts css start === */
+@media (max-width: 1199px) {
+  .header .navbar .navbar-brand {
+    max-width: 200px;
+  }
+}
+
+.header .navbar .user-name {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.header .navbar .user-name strong {
+  font-size: 18px;
+  font-weight: 700;
+  color: #016388;
+}
+
+@media (max-width: 1199px) {
+  .header .navbar .user-name {
+    left: 0;
+    right: auto;
+  }
+}
+
+.header .navbar .navbar-nav .nav-link {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 1200px) {
+  .header .navbar .navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.header .navbar .navbar-nav .nav-link:hover {
+  color: #ff4106;
+}
+
+.header .header-bottom {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e7e7e7), to(#fff));
+  background-image: linear-gradient(to top, #e7e7e7, #fff);
+  border-top: 3px solid #016388;
+  padding: 5px 0;
+}
+
+.side-nav--heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.9);
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.side-nav ul li a {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.9);
+  margin-top: 15px;
+  padding-left: 0.5rem;
+  display: block;
+}
+
+.side-nav ul li a.active {
+  color: #ff4106;
+}
+
+/*===// end of layouts css === */
+/*=== pages start === */
+/*===// end of pages  === */
+/*# sourceMappingURL=style.css.map */

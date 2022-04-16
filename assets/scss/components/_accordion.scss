@@ -1,0 +1,30 @@
+@import url(../abstracts/_mixins.scss);
+
+.main-content--heading{
+   @include font-style(36px, 300, $color-orange);
+}
+
+
+#segments.accordion {
+   .accordion-item {
+      border: 1px solid rgba($color-black, 0.1);
+   }
+   .accordion-button {
+      @include font-style(18px, 300, rgba($color-black, 1));
+      background-color: #f8f7fd;
+      &:focus {
+         box-shadow:none;
+      }
+      .badge {
+         position: absolute;
+         right: 60px;
+         top: 50%;
+         transform: translateY(-50%);
+         @include font-style(12px, 300, $color-white);
+
+         &.disabled {
+            background-color: #827877;
+         }
+      }
+   }
+}

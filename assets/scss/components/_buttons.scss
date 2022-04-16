@@ -1,0 +1,19 @@
+.btn-tilt {
+   background: $color-tilt;
+   color: $color-white;
+
+   &:hover {
+      color: $color-white;
+      background: darken($color-tilt, 5);
+   }
+}
+
+.btn-red {
+   background: $color-red;
+   color: $color-white;
+
+   &:hover {
+      color: $color-white;
+      background: darken($color-red, 5);
+   }
+}
