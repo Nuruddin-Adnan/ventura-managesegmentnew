@@ -114,6 +114,11 @@ label {
   color: black;
 }
 
+.form-check-input:checked {
+  background-color: #ff4106;
+  border-color: #ff4106;
+}
+
 /*===// end of components css === */
 /*=== layouts css start === */
 @media (max-width: 1199px) {

@@ -10,3 +10,8 @@
 label {
     @include font-style(16px, 300, rgba($color-black, 1));
 }
+
+.form-check-input:checked {
+    background-color: $color-orange;
+    border-color: $color-orange;
+}
