@@ -12,13 +12,6 @@
 /*===// end of base css === */
 
 
-/*=== components css start === */
-@import 'components/buttons';
-@import 'components/accordion';
-@import 'components/form';
-/*===// end of components css === */
-
-
 /*=== layouts css start === */
 @import 'layouts/navbar';
 @import 'layouts/side-nav';
@@ -26,9 +19,9 @@
 /*===// end of layouts css === */
 
 
-
-/*=== pages start === */
-
-/*===// end of pages  === */
-
-
+/*=== components css start === */
+@import 'components/buttons';
+@import 'components/accordion';
+@import 'components/form';
+@import 'components/nab-tab';
+/*===// end of components css === */

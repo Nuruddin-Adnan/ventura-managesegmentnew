@@ -41,85 +41,17 @@ body {
   background-color: #ff4106;
 }
 
+.bg-light-gray {
+  background-color: #f7f7f7;
+}
+
+@media (min-width: 768px) {
+  .w-md-50 {
+    width: 50%;
+  }
+}
+
 /*===// end of base css === */
-/*=== components css start === */
-.btn-tilt {
-  background: #016388;
-  color: #fff;
-}
-
-.btn-tilt:hover {
-  color: #fff;
-  background: #01516f;
-}
-
-.btn-red {
-  background: #f21703;
-  color: #fff;
-}
-
-.btn-red:hover {
-  color: #fff;
-  background: #d91503;
-}
-
-.main-content--heading {
-  font-size: 36px;
-  font-weight: 300;
-  color: #ff4106;
-}
-
-#segments.accordion .accordion-item {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-#segments.accordion .accordion-button {
-  font-size: 18px;
-  font-weight: 300;
-  color: black;
-  background-color: #f8f7fd;
-}
-
-#segments.accordion .accordion-button:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-#segments.accordion .accordion-button .badge {
-  position: absolute;
-  right: 60px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 12px;
-  font-weight: 300;
-  color: #fff;
-}
-
-#segments.accordion .accordion-button .badge.disabled {
-  background-color: #827877;
-}
-
-.panel {
-  font-size: 16px;
-  font-weight: 300;
-  color: black;
-  background-color: #e5e5e5;
-  border-left: 2px solid #ff4106;
-}
-
-label {
-  font-size: 16px;
-  font-weight: 300;
-  color: black;
-}
-
-.form-check-input:checked {
-  background-color: #ff4106;
-  border-color: #ff4106;
-}
-
-/*===// end of components css === */
 /*=== layouts css start === */
 @media (max-width: 1199px) {
   .header .navbar .navbar-brand {
@@ -150,8 +82,8 @@ label {
 }
 
 .header .navbar .navbar-nav .nav-link {
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 500;
   color: rgba(0, 0, 0, 0.9);
 }
 
@@ -205,6 +137,116 @@ label {
 }
 
 /*===// end of layouts css === */
-/*=== pages start === */
-/*===// end of pages  === */
+/*=== components css start === */
+.btn-tilt {
+  background: #016388;
+  color: #fff;
+}
+
+.btn-tilt:hover {
+  color: #fff;
+  background: #01516f;
+}
+
+.btn-red {
+  background: #f21703;
+  color: #fff;
+}
+
+.btn-red:hover {
+  color: #fff;
+  background: #d91503;
+}
+
+.btn-secondary {
+  background: #696768;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  color: #fff;
+  background: #5c5a5b;
+}
+
+.main-content--heading {
+  font-size: 36px;
+  font-weight: 300;
+  color: #ff4106;
+}
+
+#segments.accordion .accordion-item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#segments.accordion .accordion-button {
+  font-size: 18px;
+  font-weight: 300;
+  color: black;
+  background-color: #f8f7fd;
+}
+
+#segments.accordion .accordion-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#segments.accordion .accordion-button .badge {
+  min-width: 75px;
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 300;
+  color: #fff;
+}
+
+#segments.accordion .accordion-button .badge.disabled {
+  background-color: #827877;
+}
+
+.panel {
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  background-color: #e5e5e5;
+  border-left: 2px solid #ff4106;
+}
+
+.panel.panel-bottom {
+  border-left: 0;
+  border-bottom: 2px solid #ff4106;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+}
+
+.mominee-form .panel,
+.mominee-form label {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+
+.form-check-input:checked {
+  background-color: #ff4106;
+  border-color: #ff4106;
+}
+
+.nab-tab .btn {
+  background-color: #f2efef;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+}
+
+.nab-tab .btn.active {
+  background-color: #dde6ef;
+}
+
+/*===// end of components css === */
 /*# sourceMappingURL=style.css.map */

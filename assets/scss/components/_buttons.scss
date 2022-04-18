@@ -17,3 +17,13 @@
       background: darken($color-red, 5);
    }
 }
+
+.btn-secondary {
+   background: #696768;
+   color: $color-white;
+
+   &:hover {
+      color: $color-white;
+      background: darken(#696768, 5);
+   }
+}

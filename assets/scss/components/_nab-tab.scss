@@ -1,0 +1,12 @@
+.nab-tab {
+    .btn {
+        background-color: #f2efef;
+        font-weight: 700;
+        font-size: 14px;
+        color: $color-black;
+
+        &.active {
+            background-color: #dde6ef;
+        }
+    }
+}

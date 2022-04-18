@@ -2,3 +2,13 @@
 .bg-orange {
    background-color: $color-orange;
 }
+.bg-light-gray {
+   background-color: #f7f7f7;
+}
+
+// width
+@media(min-width: 768px){
+   .w-md-50 {
+      width: 50%;
+   }
+}

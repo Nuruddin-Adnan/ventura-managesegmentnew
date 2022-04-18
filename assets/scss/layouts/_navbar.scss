@@ -24,7 +24,7 @@
 
         .navbar-nav {
             .nav-link {
-                 @include font-style(18px, 300, rgba($color-black, .9));
+                 @include font-style(16px, 500, rgba($color-black, .9));
                  @media(min-width: 1200px){
                     padding-left: 1rem; 
                     padding-right: 1rem; 
