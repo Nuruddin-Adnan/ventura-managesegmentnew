@@ -27,3 +27,13 @@
       background: darken(#696768, 5);
    }
 }
+
+.btn-orange{
+   background: #fe6b31;
+   color: $color-white;
+
+   &:hover {
+      color: $color-white;
+      background: darken(#fe6b31, 5);
+   }
+}
