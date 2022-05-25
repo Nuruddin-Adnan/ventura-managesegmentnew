@@ -6,6 +6,10 @@
       white-space: nowrap;
    }
 
+   .label, option, input, select{
+      @include font-style(14px, 500, #3d3d41);
+   }
+
    .client-identity{
       background: #f4f4fc;
       padding: 18px 0 18px 15px;
@@ -19,6 +23,39 @@
       .accordion-header{
          background: #f7f7f7;
          padding: 18px 30px 18px 15px;
+
+         @media screen and (min-width: 768px) {
+            .section-start{
+               width: 40%;
+            }
+   
+            .section-middle{
+               width: 25%;
+               padding-left: 15px;
+            }
+   
+            .end-part{
+               width: 35%;
+            }
+               
+         }
+
+         @media screen and (min-width: 1400px) {
+            .section-start{
+               width: 40%;
+            }
+   
+            .section-middle{
+               width: 29%;
+               padding-left: 25px;
+
+            }
+   
+            .end-part{
+               width: 31%;
+            }
+               
+         }
 
          img{
             height: 25px;
