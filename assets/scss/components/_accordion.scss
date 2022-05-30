@@ -29,3 +29,33 @@
       }
    }
 }
+
+
+//################### bank details  ###################//
+.bank-details{
+   .accordionheader{
+      @include font-style(24px, 400, $color-orange);
+      padding-bottom: 12px;
+   }
+
+   a{
+      @include font-style(13px, 700, $color-orange);
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+   }
+
+   p{
+      white-space: break-word;
+      @include font-style(15px, 400, $color-black);
+
+   }
+
+   .logo-col{
+      width: 12%;
+   }
+
+   .text-col{
+      width: 88%;
+   }
+}
