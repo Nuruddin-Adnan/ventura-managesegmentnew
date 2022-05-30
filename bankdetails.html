@@ -174,6 +174,38 @@
                            </select>
                         </div>
 
+                        <div class="col-md-4 mt-2">
+                           <label class="form-label">Verify Bank Account  :</label>
+                        </div>
+
+                        <div class="col-md-8 mt-2 position-relative ">
+                           <input type="text" value="Bank Proof" class="form-control  bg-white" readonly>
+                           <input type="file" class="d-none" id="bankproofA">
+                           <label for="bankproofA" class="btn btn-dark btn-bank-proof text-white position-absolute">Upload</label>
+                        </div>
+
+                       
+
+                        <!-- Check for primary or secondary -->
+                        <div class="row justify-content-center pt-md-4 pt-2">
+                           <div class="col-md-10 d-md-flex justify-content-center">
+                              <div class="form-check d-flex align-items-center me-md-5">
+                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="SecondaryAccountA" checked>
+                                 <label class="form-check-label ms-2" for="SecondaryAccountA">
+                                    Set As Primary Account
+                                 </label>
+                              </div>
+                              <div class="form-check d-flex align-items-center">
+                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="PrimaryAccountA">
+                                 <label class="form-check-label ms-2" for="PrimaryAccountA">
+                                    Set As Secondary Account
+                                 </label>
+                              </div>                              
+                           </div>
+                        </div>
+                        <!-- Check for primary or secondary -->
+                        <!--  -->
+
                         <div class="row">
                            <div class="text-center pt-3">
                               <button type="submit" class="btn btn-orange px-4">Submit</button>
@@ -293,6 +325,39 @@
                         </div>
                      </div>
 
+                     <!--  -->
+                     <div class="row mt-2 align-items-center ">
+                        <div class="col-md-4">
+                        <label class="form-label">Verify Bank Account  :</label>
+                        </div>
+                        <div class="col-md-8 position-relative">
+                           <input type="text" id="bank-proof-item-1" value="Bank Proof" class="form-control  bg-white" readonly>
+                           <input type="file" class="d-none" id="bankProof">
+                           <label for="bankProof" class="btn btn-dark btn-bank-proof text-white position-absolute">Upload</label>
+                        </div>
+                     </div>
+
+                     <!-- Check for primary or secondary -->
+                     <div class="row justify-content-center pt-md-4 pt-2">
+                        <div class="col-md-10 d-md-flex justify-content-center">
+                           <div class="form-check d-flex align-items-center me-md-5">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="SecondaryAccountB" checked>
+                              <label class="form-check-label ms-2" for="SecondaryAccountB">
+                                 Set As Primary Account
+                              </label>
+                           </div>
+                           <div class="form-check d-flex align-items-center">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="PrimaryAccountB">
+                              <label class="form-check-label ms-2" for="PrimaryAccountB">
+                                 Set As Secondary Account
+                              </label>
+                           </div>                              
+                        </div>
+                     </div>
+                     <!-- Check for primary or secondary -->
+                     <!--  -->
+
+
                      <div class="row">
                         <div class="row">
                            <div class="text-center pt-3">
@@ -354,12 +419,13 @@
                               </select>
                            </div>
                         </div>
+
                         <div class="row mt-2 align-items-center ">
                            <div class="col-md-4">
-                           <label for="verify-add" class="form-label">VErify Bank Account  :</label>
+                           <label class="form-label">Verify Bank Account  :</label>
                            </div>
                            <div class="col-md-8 position-relative">
-                              <input type="text" id="bank-pfoof-item-1" value="Bank Proof" class="form-control  bg-white" readonly>
+                              <input type="text" id="bank-pfoof-item-add" value="Bank Proof" class="form-control  bg-white" readonly>
                               <input type="file" class="d-none" id="bankPfoof">
                               <label for="bankPfoof" class="btn btn-dark btn-bank-proof text-white position-absolute">Upload</label>
                            </div>
