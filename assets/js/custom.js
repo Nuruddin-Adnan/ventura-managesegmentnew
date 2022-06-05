@@ -16,4 +16,6 @@ identificationFilename('input[name=nominee-guardian-identification-1]', '#nomine
 identificationFilename('input[name=nominee-guardian-identification-2]', '#nominee-guardian-identification-item-2');
 // call function ends;
 
-// pop-up
+
+
+// add address info checkbox function ************
