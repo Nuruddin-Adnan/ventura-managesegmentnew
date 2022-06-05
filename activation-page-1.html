@@ -112,8 +112,8 @@
                            </div>
                            <div class="earn-option">
                            <div class="form-check">
-                                 <input class="form-check-input collapsed" type="radio" onClick="changeaddress()" name="confirm-address-info" id="addressChange"
-                                 data-bs-toggle="collapse" data-bs-target="#addressCollapse" aria-expanded="false" aria-controls="addressCollapse" >
+                                 <input class="form-check-input" type="radio" onClick="changeaddress()" name="confirm-address-info" id="addressChange"
+                                 >
                                  <label class="form-check-label  text-nowrap" for="addressChange">
                                     Change in Address
                                  </label>
@@ -230,5 +230,28 @@
   <!--  -->
   <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script>
+    function noChangeaddress() {
+    let noChange = document.getElementById("addressNoChange");
+    let accordionCollapse = document.getElementById("addressCollapse");
+    
+
+    if (noChange.checked == true){
+      accordionCollapse.classList.add("collapse");
+    }
+  }
+
+  function changeaddress() {
+
+    let changeAddress = document.getElementById("addressChange");
+    let accordioCollapse = document.getElementById("addressCollapse");
+    
+
+    // If the checkbox is checked, display the output text
+    if (changeAddress.checked == true){
+      accordioCollapse.classList.remove('collapse');
+    }
+  }
+  </script>
 </body>
 </html>
