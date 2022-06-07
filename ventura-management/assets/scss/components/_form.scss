@@ -1,0 +1,27 @@
+@import url(../abstracts/_mixins.scss);
+
+
+.panel {
+    @include font-style(16px, 300, rgba($color-black, 1));
+    background-color: #e5e5e5;
+    border-left: 2px solid $color-orange;
+
+    &.panel-bottom {
+        border-left: 0;
+        border-bottom: 2px solid $color-orange;
+    }
+}
+
+label {
+    @include font-style(16px, 300, rgba($color-black, 1));
+}
+
+.mominee-form .panel,
+.mominee-form label {
+    @include font-style(14px, 500, rgba($color-black, 1));
+}
+
+.form-check-input:checked {
+    background-color: $color-orange;
+    border-color: $color-orange;
+}

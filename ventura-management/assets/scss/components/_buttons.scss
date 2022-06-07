@@ -1,0 +1,47 @@
+.btn-tilt {
+   background: $color-tilt;
+   color: $color-white;
+
+   &:hover {
+      color: $color-white;
+      background: darken($color-tilt, 5);
+   }
+}
+
+.btn-red {
+   background: $color-red;
+   color: $color-white;
+
+   &:hover {
+      color: $color-white;
+      background: darken($color-red, 5);
+   }
+}
+
+.btn-secondary {
+   background: #696768;
+   color: $color-white;
+
+   &:hover {
+      color: $color-white;
+      background: darken(#696768, 5);
+   }
+}
+
+.btn-orange{
+   background: #fe6b31;
+   color: $color-white;
+
+   &:hover {
+      color: $color-white;
+      background: darken(#fe6b31, 5);
+   }
+}
+
+
+.btn-bank-proof{
+   padding: 2px 10px;
+   right: 15px;
+   top: 50%;
+   transform: translateY(-50%);
+}

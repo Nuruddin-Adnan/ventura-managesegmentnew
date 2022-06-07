@@ -1,0 +1,131 @@
+@import url(../abstracts/_mixins.scss);
+
+
+.personal-details, .activaiton-page{
+   label{
+      @include font-style(14px, 700, #3d3d41);
+      white-space: nowrap;
+   }
+
+   .label, option, input, select{
+      @include font-style(14px, 500, #3d3d41);
+   }
+
+   .client-identity{
+      background: #f4f4fc;
+      padding: 18px 0 18px 15px;
+      margin-bottom: 7px;
+
+      .sub-heading{
+         @include font-style(18px, 400, $color-orange);
+         line-height: 36px;
+      }
+   }
+
+   .accordion-item{
+      margin-bottom: 2px;
+      border: none !important;
+      
+      .accordion-header{
+         background: #f7f7f7;
+         padding: 18px 30px 18px 15px;
+
+         @media screen and (min-width: 768px) {
+            .section-start{
+               width: 40%;
+            }
+   
+            .section-middle{
+               width: 25%;
+               padding-left: 15px;
+            }
+   
+            .end-part{
+               width: 35%;
+            }
+               
+         }
+
+         @media screen and (min-width: 1400px) {
+            .section-start{
+               width: 40%;
+            }
+   
+            .section-middle{
+               width: 29%;
+               padding-left: 25px;
+
+            }
+   
+            .end-part{
+               width: 31%;
+            }
+               
+         }
+
+         img{
+            height: 25px;
+            cursor: pointer;
+         }
+
+         p{
+            @include font-style(14px, 400, #3d3d41);
+         }
+      }
+
+      .accordion-body{
+         border: 2px solid #f7f7f7;
+         padding: 18px 30px 18px 15px !important;
+
+         .accordion-body-header{
+            @include font-style(18px, 400, $color-orange);
+            padding-bottom: 10px;
+         }
+
+         .income-Rng, .occupation-label{
+            @include font-style(15px, 400, $color-black);
+         }
+         
+         .otp-popup{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+
+            @media screen and (max-width: 575px){
+               width: 90%;               
+            }
+            
+            h3{
+               @include font-style(15px, 400, $color-black);
+            }
+            
+            .otp{
+               border: 0;
+               border-bottom: 1px solid #000;
+               width: 50px;
+               text-align: center;
+
+               @media screen and (max-width: 575px){
+                  width: 35px;               
+               }
+            }
+         }
+      }
+   }
+
+   .links{
+      padding-top: 10px;
+      .details-link{
+         a{
+            text-decoration: underline;
+            margin-right: 5px;
+            @include font-style(15px, 400, $color-orange);
+         }
+   
+         span{
+            @include font-style(15px, 400, $color-text-dark);
+         }
+      }
+   }
+}

@@ -1,0 +1,35 @@
+// background 
+.bg-orange {
+   background-color: $color-orange;
+}
+.bg-light-gray {
+   background-color: #f7f7f7;
+}
+
+// text style{
+.text-orange{
+   color: $color-orange;
+}
+
+// width
+@media(min-width: 768px){
+   .w-md-50 {
+      width: 50%;
+   }
+
+   .w-md-auto {
+      width: auto !important;
+   }
+}
+
+// cursor
+.cursor-pointer {
+   cursor: pointer;
+}
+
+// height 
+@media (min-width: 992px) {
+   .min-h-inherit{
+      min-height: inherit;
+   }
+}

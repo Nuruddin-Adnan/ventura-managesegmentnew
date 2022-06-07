@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>personaldetails</title>
+  <link rel='shortcut icon' href='assets/images/logo.png' type='image/x-icon'>
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="personal-details">
+
+  <!-- === header section start === -->
+  <header class="header">
+    <nav class="navbar navbar-expand-xl navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo.png" alt="logo" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
+          <h4 class="user-name">Welcome : <strong>Mr Ranjit Sundar Shetty</strong></h4>
+          <ul class="navbar-nav pt-5 ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Customer Delight</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="header-bottom text-xl-end text-center">
+      <div class="container">
+        <a href="#" class="btn btn-sm btn-tilt">Services Menu</a>
+        <a href="#" class="btn btn-sm btn-tilt">Logout</a>
+      </div>
+    </div>
+  </header>
+  <!-- ===//end of header section === -->
+ 
+
+  <div class="container">
+    <div class="row gy-4 pt-4">
+      <!-- === side-nav section start === -->
+      <div class="col-lg-3 side-nav">
+        <h3 class="side-nav--heading">Client Profile <i class="fas fa-minus-circle"></i></h3>
+        <ul class="ps-0">
+          <li><a href="personaldetails.html">Personal Details</a></li>
+          <li><a href="bankdetails.html" class="active">Bank Details</a></li>
+          <li><a href="nomineeform.html">Nominee</a></li>
+          <li><a href="managesegment.html">Manage Segment</a></li>
+        </ul>
+      </div>
+      <!-- ===//end of side-nav section === -->
+      
+      <!-- === main-content section start === -->
+      <div class="col-lg-9 main-content bank-details">
+        
+        <!-- content Header -->
+        <h3 class="main-content--heading">Bank Details</h3>
+        <!-- content Header ends -->
+        
+        <!-- main content body -->
+        <div class="vstack col-xl-10">
+         <hr class="my-2">
+
+         <div class="accordion accordion-flush" id="segments">
+
+            <!-- Primary Bank Account starts -->
+            <div class="accordion-item mb-2">
+               <div class="accordion-header" id="flush-headingOne">
+                  <h4 class="accordionheader">
+                     Primary Bank Account <span>&nbsp;<i class="fas fa-caret-down"></i></span>
+                  </h4>
+                  <div class="row">
+                     <div class="col-10 text-col pe-0">
+                        <div class="row">
+                           <div class="col-md-8 pe-md-0">
+                              <div class="row">
+                                 <div class="col-5 col-md-3">
+                                    <label>Bank Name :</label>
+                                 </div>
+                                 <div class="col-7 col-md-9 text-end text-md-start">
+                                    <p>Industrial and Commercial Bank Of China Ltd.</p>
+                                 </div>
+                              </div>
+                              <div class="row align-items-center">
+                                 <div class="col-5 col-md-3">
+                                    <label>
+                                       IFSC Code :</label>
+                                 </div>
+                                 <div class="col-7 col-md-9 text-end text-md-start">
+                                    <p> HDFC0000114</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-4 pe-md-0">
+                              <div class="row align-items-center">
+                                 <div class="col-5 pe-md-0 col-md-6">
+                                    <label>Account No :</label>
+                                 </div>
+                                 <div class="col-7 col-md-6 p-md-0 text-end text-md-start pe-md-0">
+                                    <p>019675100002394</p>
+                                 </div>
+                              </div>
+                              <div class="row align-items-center">
+                                 <div class="col-5 col-md-6">
+                                    <label>Account Type:</label>
+                                 </div>
+                                 <div class="col-7 col-md-6 text-end text-md-start pe-md-0 ps-md-0">
+                                    <p>Saving</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-2 pe-0 logo-col text-end">
+                        <div class="d-md-flex align-items-end h-100 justify-content-end">
+                           <img src="assets/images/icon.png" class="collapsed" data-bs-toggle="collapse" data-bs-target="#primaryAccountCollapse" aria-expanded="false" aria-controls="primaryAccountCollapse" alt="edit-image">
+                        </div>
+                     </div>
+                  </div>  
+               </div>
+
+               <div id="primaryAccountCollapse" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#segments">
+                  <div class="accordion-body">
+                  <form>
+                     <div class="row">
+                        <div class="col-md-4">
+                           <label for="BankName" class="form-label">Bank Name :</label>
+                        </div>
+                        <div class="col-md-8">
+                           <input type="text" class="form-control mb-2" id="BankName">
+                        </div>
+                        <div class="col-md-4">
+                           <label for="accountNo" class="form-label">Account no :</label>
+                        </div>
+                        <div class="col-md-8">
+                           <input type="text" class="form-control mb-2" id="accountNo">
+                        </div>
+                        <div class="col-md-4">
+                           <label for="ren" class="form-label">Re-enter Account no :</label>
+                        </div>
+                        <div class="col-md-8">
+                           <input type="text" class="form-control mb-2" id="ren">
+                        </div>
+                        <div class="col-md-4">
+                           <label for="IFSC" class="form-label">IFSC Code :</label>
+                        </div>
+                        <div class="col-md-8">
+                           <input type="text" class="form-control mb-2" id="IFSC">
+                        </div>
+                        <div class="col-md-4">
+                           <label for="accountTypeS" class="form-label">Account Type :</label>
+                        </div>
+                        <div class="col-md-8">
+                           <select id="accountTypeS" class="form-select">
+                              <option value="self">Saving Account</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                           </select>
+                        </div>
+
+                        <div class="col-md-4 mt-2">
+                           <label class="form-label">Verify Bank Account  :</label>
+                        </div>
+
+                        <div class="col-md-8 mt-2 position-relative ">
+                           <input type="text" value="Bank Proof" class="form-control  bg-white" readonly>
+                           <input type="file" class="d-none" id="bankproofA">
+                           <label for="bankproofA" class="btn btn-dark btn-bank-proof text-white position-absolute">Upload</label>
+                        </div>
+
+                    
+                        <div class="row pt-3">
+                           <div class="col-md-8 offset-md-4 text-center text-md-start">
+                              <button type="submit" class="btn btn-orange px-4 w-100 w-md-auto">Submit</button>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+                  </div>
+               </div>
+            </div>
+            <!-- Primary Bank Account ends -->
+
+            <!-- secondary bank starts -->
+            <div class="accordion-item mb-2">
+               <div class="accordion-header" id="flush-headingTwo">
+                  <h4 class="accordionheader">
+                     Secondary Bank Account <span> &nbsp; <i class="fas fa-caret-down"></i></span>
+                  </h4>
+                  <div class="row">
+                     <div class="col-10 text-col pe-0">
+                        <div class="row">
+                           <div class="col-md-8 pe-md-0">
+                              <div class="row">
+                                 <div class="col-5 col-md-3">
+                                    <label>Bank Name :</label>
+                                 </div>
+                                 <div class="col-7 col-md-9 text-end text-md-start">
+                                    <p>State Bank of India</p>
+                                 </div>
+                              </div>
+                              <div class="row align-items-center">
+                                 <div class="col-5 col-md-3">
+                                    <label>
+                                       IFSC Code :</label>
+                                 </div>
+                                 <div class="col-7 col-md-9 text-end text-md-start">
+                                    <p> SBIN0000353</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-4 pe-md-0">
+                              <div class="row align-items-center">
+                                 <div class="col-5 pe-md-0 col-md-6">
+                                    <label>Account No :</label>
+                                 </div>
+                                 <div class="col-7 col-md-6 p-md-0 text-end text-md-start pe-md-0">
+                                    <p>019675100002394</p>
+                                 </div>
+                              </div>
+                              <div class="row align-items-center">
+                                 <div class="col-5 col-md-6">
+                                    <label>Account Type:</label>
+                                 </div>
+                                 <div class="col-7 col-md-6 text-end text-md-start pe-md-0 ps-md-0">
+                                    <p>Saving</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-2 pe-0 logo-col">
+                        <div class="d-md-flex align-items-end h-100 justify-content-end text-end">
+                           <img src="assets/images/icon.png" class="collapsed mb-2 mb-md-0" data-bs-toggle="collapse" data-bs-target="#secondaryAccountCollapse" aria-expanded="false" aria-controls="secondaryAccountCollapse" alt="edit-image">
+   
+                           <img src="assets/images/delete.png" class="mt-md-0 ms-md-2" data-bs-toggle="collapse"  alt="delete-image">
+                        </div>
+                     </div>
+                  </div>   
+                  <a href="#"> <span><img class="me-2 img-fluid" src="assets/images/default.png" alt="g"></span> <u>Set as Primary Bank Account</u></a>
+               </div>
+
+               <div id="secondaryAccountCollapse" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#segments">
+                  <div class="accordion-body">
+                  <form>
+                     <div class="row">
+                        <div class="col-md-4">
+                        <label for="BankName2" class="form-label">Bank Name :</label>
+                        </div>
+                        <div class="col-md-8">
+                        <input type="text" class="form-control mb-2" id="BankName2">
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                        <label for="no2" class="form-label">Account no :</label>
+                        </div>
+                        <div class="col-md-8">
+                        <input type="text" class="form-control mb-2" id="no2">
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                        <label for="ren2" class="form-label">Re-enter Account no :</label>
+                        </div>
+                        <div class="col-md-8">
+                        <input type="text" class="form-control mb-2" id="ren2">
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                        <label for="IFSC2" class="form-label">IFSC Code :</label>
+                        </div>
+                        <div class="col-md-8">
+                        <input type="text" class="form-control mb-2" id="IFSC2">
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                        <label for="accountType2" class="form-label">Account Type :</label>
+                        </div>
+                        <div class="col-md-8">
+                           <select id="accountType2" class="form-select">
+                              <option value="self">Saving Account</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                           </select>
+                        </div>
+                     </div>
+
+                     <!--  -->
+                     <div class="row mt-2 align-items-center ">
+                        <div class="col-md-4">
+                        <label class="form-label">Verify Bank Account  :</label>
+                        </div>
+                        <div class="col-md-8 position-relative">
+                           <input type="text" id="bank-proof-item-1" value="Bank Proof" class="form-control  bg-white" readonly>
+                           <input type="file" class="d-none" id="bankProof">
+                           <label for="bankProof" class="btn btn-dark btn-bank-proof text-white position-absolute">Upload</label>
+                        </div>
+                     </div>
+
+                     <!-- Check for primary or secondary -->
+                     <div class="row justify-content-end pt-md-4 pt-2">
+                        <div class="col-md-8 d-md-flex ">
+                           <div class="form-check d-flex me-md-5">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="SecondaryAccountB" checked>
+                              <label class="form-check-label ms-2" for="SecondaryAccountB"> Set As Primary Account</label>
+                           </div>
+                           <div class="form-check d-flex">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="PrimaryAccountB">
+                              <label class="form-check-label ms-2" for="PrimaryAccountB">Set As Secondary Account</label>
+                           </div>                              
+                        </div>
+                     </div>
+                     <!-- Check for primary oor secondary -->
+                     <!--  -->
+
+
+                     <div class="row pt-3">
+                        <div class="col-md-8 offset-md-4 text-center text-md-start">
+                           <button type="submit" class="btn btn-orange px-4 w-100 w-md-auto">Submit</button>
+                        </div>
+                     </div>
+
+                  </form>
+                  </div>
+               </div>
+            </div>
+            <!-- secondary bank ends -->
+
+            <!-- add bank account -->
+            <div class="accordion-item">
+               <div class="accordion-header" id="flush-headingthree">
+                  <h4 class="accordionheader pb-0 collapsed" data-bs-toggle="collapse" data-bs-target="#newAccountCollapse" aria-expanded="false" aria-controls="newAccountCollapse">
+                     <span class="cursor-pointer">+ New Bank Account </span>
+                  </h4>
+               </div>
+
+               <div id="newAccountCollapse" class="accordion-collapse collapse" aria-labelledby="flush-headingthree" data-bs-parent="#segments">
+                  <div class="accordion-body">
+                     <form>
+                        <div class="row">
+                           <div class="col-md-4">
+                           <label for="newbank" class="form-label">Bank Name :</label>
+                           </div>
+                           <div class="col-md-8">
+                           <input type="text" class="form-control mb-2" id="newbank">
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-4">
+                           <label for="newAc" class="form-label">Account no :</label>
+                           </div>
+                           <div class="col-md-8">
+                           <input type="text" class="form-control mb-2" id="newAc">
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-4">
+                           <label for="renew" class="form-label">Re-enter Account no :</label>
+                           </div>
+                           <div class="col-md-8">
+                           <input type="text" class="form-control mb-2" id="renew">
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-4">
+                           <label for="accountType-add" class="form-label">Account Type :</label>
+                           </div>
+                           <div class="col-md-8">
+                              <select id="accountType-add" class="form-select">
+                                 <option value="self">Saving Account</option>
+                                 <option value="2">Two</option>
+                                 <option value="3">Three</option>
+                              </select>
+                           </div>
+                        </div>
+
+                        <div class="row mt-2 align-items-center ">
+                           <div class="col-md-4">
+                           <label class="form-label">Verify Bank Account  :</label>
+                           </div>
+                           <div class="col-md-8 position-relative">
+                              <input type="text" id="bank-pfoof-item-add" value="Bank Proof" class="form-control  bg-white" readonly>
+                              <input type="file" class="d-none" id="bankPfoof">
+                              <label for="bankPfoof" class="btn btn-dark btn-bank-proof text-white position-absolute">Upload</label>
+                           </div>
+                        </div>
+
+                        <!-- Check for primary or secondary -->
+                        <div class="row justify-content-end pt-md-4 pt-2">
+                           <div class="col-md-8 d-md-flex ">
+                              <div class="form-check d-flex me-md-5">
+                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="SecondaryAccount" checked>
+                                 <label class="form-check-label ms-2" for="SecondaryAccount">
+                                    Set As Primary Account
+                                 </label>
+                              </div>
+                              <div class="form-check d-flex">
+                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="PrimaryAccount">
+                                 <label class="form-check-label ms-2" for="PrimaryAccount">
+                                    Set As Secondary Account
+                                 </label>
+                              </div>                              
+                           </div>
+                        </div>
+                        <!-- Check for primary or secondary -->
+   
+                        <div class="row pt-3">
+                           <div class="col-md-8 offset-md-4 text-center text-md-start">
+                              <button type="submit" class="btn btn-orange px-4 w-100 w-md-auto">Submit</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <!-- add bank account -->
+         </div>
+        </div>
+        <!-- main content body ends-->
+
+      </div>
+        <!-- ===//end of main-content section === -->
+    </div>
+  </div>
+
+  <!--  -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>

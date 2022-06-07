@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>nomineeform</title>
+  <link rel='shortcut icon' href='assets/images/logo.png' type='image/x-icon'>
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- === header section start === -->
+  <header class="header">
+    <nav class="navbar navbar-expand-xl navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo.png" alt="logo" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
+          <h4 class="user-name">Welcome : <strong>Mr Ranjit Sundar Shetty</strong></h4>
+          <ul class="navbar-nav pt-5 ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Customer Delight</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="header-bottom text-xl-end text-center">
+      <div class="container">
+        <a href="#" class="btn btn-sm btn-tilt">Services Menu</a>
+        <a href="#" class="btn btn-sm btn-tilt">Logout</a>
+      </div>
+    </div>
+  </header>
+  <!-- ===//end of header section === -->
+ 
+
+  <div class="container">
+    <div class="row gy-4 pt-4">
+      <!-- === side-nav section start === -->
+      <div class="col-lg-3 side-nav">
+        <h3 class="side-nav--heading">Client Profile <i class="fas fa-minus-circle"></i></h3>
+        <ul class="ps-0">
+          <li><a href="personaldetails.html">Personal Details</a></li>
+          <li><a href="bankdetails.html">Bank Details</a></li>
+          <li><a href="nomineeform.html" class="active">Nominee</a></li>
+          <li><a href="managesegment.html">Manage Segment</a></li>
+        </ul>
+      </div>
+      <!-- ===//end of side-nav section === -->
+      
+      <!-- === main-content section start === -->
+      <div class="col-lg-9 main-content mb-5">
+        
+          <h3 class="main-content--heading pb-2">Nominee</h3>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="nominee" id="nominee1" checked>
+                <label class="form-check-label" for="nominee1">
+                  I/want to nominate
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="nominee" id="nominee2">
+                <label class="form-check-label" for="nominee2">
+                  I don’t want to nominate
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav nab-tab mt-5 mb-3">
+            <button class="btn active" id="nominee-1-tab" data-bs-toggle="tab" data-bs-target="#nominee-1" type="button" role="tab" aria-controls="nominee-1" aria-selected="true">Nominee-1</button>
+
+            <button class="btn mx-2" id="nominee-2-tab" data-bs-toggle="tab" data-bs-target="#nominee-2" type="button" role="tab" aria-controls="nominee-2" aria-selected="true">Nominee-2</button>
+            
+            <button class="btn" id="nominee-3-tab" data-bs-toggle="tab" data-bs-target="#nominee-3" type="button" role="tab" aria-controls="nominee-3" aria-selected="true">Nominee-3</button>
+          </div>
+
+          
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="nominee-1" role="tabpanel" aria-labelledby="nominee-1-tab">
+              <div class="vstack col-xl-10 bg-light-gray p-3 rounded">
+                <form class="mominee-form">
+                  <!--============ nominee-1 details start ============-->
+                  <div class="nominee-1-details">
+                    <div class="vstack col-lg-5 mb-3 col-md-6 ps-2 p-1 panel panel-bottom">Nominee-1 Details</div>
+                    <div class="row mb-3 align-items-md-center">
+                      <div class="col-md-4">
+                        <label>Nominee Name:</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="row mb-3 align-items-md-center">
+                      <div class="col-md-4">
+                        <label>Relationship with Nominee:</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-8">
+                            <label>Share Percentage of Nominee:</label>
+                          </div>
+                          <div class="col-md-4">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>Date of Birth of Nominee:</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="date" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="vstack col-lg-5 mb-3 mt-3 col-md-6 ps-2 p-1 panel panel-bottom">Contact Information of Nominee</div>
+                    <div class="row mb-md-0 mb-3 ">
+                      <div class="col-md-4 pt-md-2">
+                        <label>Address of the Nominee: </label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control mb-3" placeholder="Address 1">
+                        <input type="text" class="form-control mb-3" placeholder="Address 2">
+                        <input type="text" class="form-control mb-3" placeholder="Address 3">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>State :</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-3">
+                            <label>Country:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>Mobile Number :</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-3">
+                            <label>Email:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="vstack col-lg-6 mb-3 mt-3 col-md-6 ps-2 p-1 panel panel-bottom">Nominees Personal Identification details (any one):</div>
+                    <div class="row">
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Photograph & Signature" name="nominee-identification-1">
+                          <label class="form-check-label">
+                            Photograph & Signature
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Pan/Aadhaar Card no." name="nominee-identification-1">
+                          <label class="form-check-label">
+                            Pan/Aadhaar Card no.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Saving Bank account no." name="nominee-identification-1">
+                          <label class="form-check-label">
+                            Saving Bank account no.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Proof of Identity" name="nominee-identification-1">
+                          <label class="form-check-label">
+                            Proof of Identity
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Demat Account ID" name="nominee-identification-1">
+                          <label class="form-check-label">
+                            Demat Account ID
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-md-flex mt-3 w-md-50 align-items-center">
+                      <label class="text-nowrap">Attach file:</label>
+                      <div class="d-flex align-items-center">
+                        <input type="text" id="nominee-identification-item-1" value="Photograph & Signature" class="form-control ms-md-3 me-3 bg-white" readonly>
+                        <input type="file" class="d-none" id="nominee-identification-file-1">
+                        <label for="nominee-identification-file-1" class="btn btn-dark text-white">Upload</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!--============// end of nominee-1 details ============-->
+
+                 
+
+                  <!--============ nominee-1-guardian start ============-->
+                  <div class="nominee-1-guardian-details mt-5">
+                    <div class="vstack col-lg-5 mb-3 col-md-6 ps-2 p-1 panel panel-bottom">If nominee is a minor :</div>
+                    <div class="vstack col-lg-5 mb-3 col-md-6 ps-2 p-1 panel panel-bottom">Guardian Details :</div>
+                    <div class="row mb-3 align-items-md-center">
+                      <div class="col-md-4">
+                        <label>Name of the guardian:</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="row mb-3 align-items-md-center">
+                      <div class="col-md-4">
+                        <label>Relationship with Nominee:</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="vstack col-lg-5 mb-3 mt-3 col-md-6 ps-2 p-1 panel panel-bottom">Contact Information of the Guardian</div>
+                    <div class="row mb-md-0 mb-3 ">
+                      <div class="col-md-4 pt-md-2">
+                        <label>Address of the Guardian:  </label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control mb-3" placeholder="Address 1">
+                        <input type="text" class="form-control mb-3" placeholder="Address 2">
+                        <input type="text" class="form-control mb-3" placeholder="Address 3">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>State :</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-3">
+                            <label>Country:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>Mobile Number :</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-3">
+                            <label>Email:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="vstack col-lg-6 mb-3 mt-3 col-md-6 ps-2 p-1 panel panel-bottom">Guardians Personal Identification details (any one):</div>
+                    <div class="row">
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Photograph & Signature" name="nominee-guardian-identification-1">
+                          <label class="form-check-label">
+                            Photograph & Signature
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Pan/Aadhaar Card no." name="nominee-guardian-identification-1">
+                          <label class="form-check-label">
+                            Pan/Aadhaar Card no.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Saving Bank account no." name="nominee-guardian-identification-1">
+                          <label class="form-check-label">
+                            Saving Bank account no.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Proof of Identity" name="nominee-guardian-identification-1">
+                          <label class="form-check-label">
+                            Proof of Identity
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Demat Account ID" name="nominee-guardian-identification-1">
+                          <label class="form-check-label">
+                            Demat Account ID
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-md-flex mt-3 w-md-50 align-items-center">
+                      <label class="text-nowrap">Attach file:</label>
+                      <div class="d-flex align-items-center">
+                        <input type="text" value="Photograph & Signature" id="nominee-guardian-identification-item-1" class="form-control ms-md-3 me-3 bg-white" readonly>
+                        <input type="file" class="d-none" id="nominee-guardian-identification-file-1">
+                        <label for="nominee-guardian-identification-file-1" class="btn btn-dark text-white">Upload</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!--============// end of nominee-1-guardian details ============-->
+                  <div class="text-center my-5">
+                    <button type="submit" class="btn px-5 btn-red">Save</button>
+                    <button type="button" class="btn  btn-secondary">+ Add nominee No - 2</button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="nominee-2" role="tabpanel" aria-labelledby="nominee-2-tab">
+              <div class="vstack col-xl-10 bg-light-gray p-3 rounded">
+                <form class="mominee-form">
+                  <!--============ nominee-2 details start ============-->
+                  <div class="nominee-2-details">
+                    <div class="vstack col-lg-5 mb-3 col-md-6 ps-2 p-1 panel panel-bottom">Nominee-2 Details</div>
+                    <div class="row mb-3 align-items-md-center">
+                      <div class="col-md-4">
+                        <label>Nominee Name:</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="row mb-3 align-items-md-center">
+                      <div class="col-md-4">
+                        <label>Relationship with Nominee:</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-8">
+                            <label>Share Percentage of Nominee:</label>
+                          </div>
+                          <div class="col-md-4">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>Date of Birth of Nominee:</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="date" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="vstack col-lg-5 mb-3 mt-3 col-md-6 ps-2 p-1 panel panel-bottom">Contact Information of Nominee</div>
+                    <div class="row mb-md-0 mb-3 ">
+                      <div class="col-md-4 pt-md-2">
+                        <label>Address of the Nominee: </label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control mb-3" placeholder="Address 1">
+                        <input type="text" class="form-control mb-3" placeholder="Address 2">
+                        <input type="text" class="form-control mb-3" placeholder="Address 3">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>State :</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-3">
+                            <label>Country:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>Mobile Number :</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-3">
+                            <label>Email:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="vstack col-lg-6 mb-3 mt-3 col-md-6 ps-2 p-1 panel panel-bottom">Nominees Personal Identification details (any one):</div>
+                    <div class="row">
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Photograph & Signature" name="nominee-identification-2">
+                          <label class="form-check-label">
+                            Photograph & Signature
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Pan/Aadhaar Card no." name="nominee-identification-2">
+                          <label class="form-check-label">
+                            Pan/Aadhaar Card no.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Saving Bank account no." name="nominee-identification-2">
+                          <label class="form-check-label">
+                            Saving Bank account no.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Proof of Identity" name="nominee-identification-2">
+                          <label class="form-check-label">
+                            Proof of Identity
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Demat Account ID" name="nominee-identification-2">
+                          <label class="form-check-label">
+                            Demat Account ID
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-md-flex mt-3 w-md-50 align-items-center">
+                      <label class="text-nowrap">Attach file:</label>
+                      <div class="d-flex align-items-center">
+                        <input type="text" id="nominee-identification-item-2" value="Photograph & Signature" class="form-control ms-md-3 me-3 bg-white" readonly>
+                        <input type="file" class="d-none" id="nominee-identification-file-2">
+                        <label for="nominee-identification-file-2" class="btn btn-dark text-white">Upload</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!--============// end of nominee-2 details ============-->
+
+                 
+
+                  <!--============ nominee-2-guardian start ============-->
+                  <div class="nominee-2-guardian-details mt-5">
+                    <div class="vstack col-lg-5 mb-3 col-md-6 ps-2 p-1 panel panel-bottom">If nominee is a minor :</div>
+                    <div class="vstack col-lg-5 mb-3 col-md-6 ps-2 p-1 panel panel-bottom">Guardian Details :</div>
+                    <div class="row mb-3 align-items-md-center">
+                      <div class="col-md-4">
+                        <label>Name of the guardian:</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="row mb-3 align-items-md-center">
+                      <div class="col-md-4">
+                        <label>Relationship with Nominee:</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="vstack col-lg-5 mb-3 mt-3 col-md-6 ps-2 p-1 panel panel-bottom">Contact Information of the Guardian</div>
+                    <div class="row mb-md-0 mb-3 ">
+                      <div class="col-md-4 pt-md-2">
+                        <label>Address of the Guardian:  </label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control mb-3" placeholder="Address 1">
+                        <input type="text" class="form-control mb-3" placeholder="Address 2">
+                        <input type="text" class="form-control mb-3" placeholder="Address 3">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>State :</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-3">
+                            <label>Country:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>Mobile Number :</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-3">
+                            <label>Email:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="vstack col-lg-6 mb-3 mt-3 col-md-6 ps-2 p-1 panel panel-bottom">Guardians Personal Identification details (any one):</div>
+                    <div class="row">
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Photograph & Signature" name="nominee-guardian-identification-2">
+                          <label class="form-check-label">
+                            Photograph & Signature
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Pan/Aadhaar Card no." name="nominee-guardian-identification-2">
+                          <label class="form-check-label">
+                            Pan/Aadhaar Card no.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Saving Bank account no." name="nominee-guardian-identification-2">
+                          <label class="form-check-label">
+                            Saving Bank account no.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Proof of Identity" name="nominee-guardian-identification-2">
+                          <label class="form-check-label">
+                            Proof of Identity
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Demat Account ID" name="nominee-guardian-identification-2">
+                          <label class="form-check-label">
+                            Demat Account ID
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-md-flex mt-3 w-md-50 align-items-center">
+                      <label class="text-nowrap">Attach file:</label>
+                      <div class="d-flex align-items-center">
+                        <input type="text" value="Photograph & Signature" id="nominee-guardian-identification-item-2" class="form-control ms-md-3 me-3 bg-white" readonly>
+                        <input type="file" class="d-none" id="nominee-guardian-identification-file-1">
+                        <label for="nominee-guardian-identification-file-1" class="btn btn-dark text-white">Upload</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!--============// end of nominee-2-guardian details ============-->
+                  <div class="text-center my-5">
+                    <button type="submit" class="btn px-5 btn-red">Save</button>
+                    <button type="button" class="btn  btn-secondary">+ Add nominee No - 3</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+
+
+
+
+
+            
+            <div class="tab-pane fade" id="nominee-3" role="tabpanel" aria-labelledby="nominee-3-tab">
+              <div class="vstack col-xl-10 bg-light-gray p-3 rounded">
+                <form class="mominee-form">
+                  <!--============ nominee-3 details start ============-->
+                  <div class="nominee-3-details">
+                    <div class="vstack col-lg-5 mb-3 col-md-6 ps-2 p-1 panel panel-bottom">Nominee-3 Details</div>
+                    <div class="row mb-3 align-items-md-center">
+                      <div class="col-md-4">
+                        <label>Nominee Name:</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="row mb-3 align-items-md-center">
+                      <div class="col-md-4">
+                        <label>Relationship with Nominee:</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-8">
+                            <label>Share Percentage of Nominee:</label>
+                          </div>
+                          <div class="col-md-4">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>Date of Birth of Nominee:</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="date" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="vstack col-lg-5 mb-3 mt-3 col-md-6 ps-2 p-1 panel panel-bottom">Contact Information of Nominee</div>
+                    <div class="row mb-md-0 mb-3 ">
+                      <div class="col-md-4 pt-md-2">
+                        <label>Address of the Nominee: </label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control mb-3" placeholder="Address 1">
+                        <input type="text" class="form-control mb-3" placeholder="Address 2">
+                        <input type="text" class="form-control mb-3" placeholder="Address 3">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>State :</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-3">
+                            <label>Country:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>Mobile Number :</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-3">
+                            <label>Email:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="vstack col-lg-6 mb-3 mt-3 col-md-6 ps-2 p-1 panel panel-bottom">Nominees Personal Identification details (any one):</div>
+                    <div class="row">
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Photograph & Signature" name="nominee-identification-2">
+                          <label class="form-check-label">
+                            Photograph & Signature
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Pan/Aadhaar Card no." name="nominee-identification-2">
+                          <label class="form-check-label">
+                            Pan/Aadhaar Card no.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Saving Bank account no." name="nominee-identification-2">
+                          <label class="form-check-label">
+                            Saving Bank account no.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Proof of Identity" name="nominee-identification-2">
+                          <label class="form-check-label">
+                            Proof of Identity
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Demat Account ID" name="nominee-identification-2">
+                          <label class="form-check-label">
+                            Demat Account ID
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-md-flex mt-3 w-md-50 align-items-center">
+                      <label class="text-nowrap">Attach file:</label>
+                      <div class="d-flex align-items-center">
+                        <input type="text" id="nominee-identification-item-2" value="Photograph & Signature" class="form-control ms-md-3 me-3 bg-white" readonly>
+                        <input type="file" class="d-none" id="nominee-identification-file-2">
+                        <label for="nominee-identification-file-2" class="btn btn-dark text-white">Upload</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!--============// end of nominee-3 details ============-->
+
+                 
+
+                  <!--============ nominee-3-guardian start ============-->
+                  <div class="nominee-3-guardian-details mt-5">
+                    <div class="vstack col-lg-5 mb-3 col-md-6 ps-2 p-1 panel panel-bottom">If nominee is a minor :</div>
+                    <div class="vstack col-lg-5 mb-3 col-md-6 ps-2 p-1 panel panel-bottom">Guardian Details :</div>
+                    <div class="row mb-3 align-items-md-center">
+                      <div class="col-md-4">
+                        <label>Name of the guardian:</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="row mb-3 align-items-md-center">
+                      <div class="col-md-4">
+                        <label>Relationship with Nominee:</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="vstack col-lg-5 mb-3 mt-3 col-md-6 ps-2 p-1 panel panel-bottom">Contact Information of the Guardian</div>
+                    <div class="row mb-md-0 mb-3 ">
+                      <div class="col-md-4 pt-md-2">
+                        <label>Address of the Guardian:  </label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control mb-3" placeholder="Address 1">
+                        <input type="text" class="form-control mb-3" placeholder="Address 2">
+                        <input type="text" class="form-control mb-3" placeholder="Address 3">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>State :</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-3">
+                            <label>Country:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-6">
+                            <label>Mobile Number :</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row mb-3 align-items-md-center">
+                          <div class="col-md-3">
+                            <label>Email:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="vstack col-lg-6 mb-3 mt-3 col-md-6 ps-2 p-1 panel panel-bottom">Guardians Personal Identification details (any one):</div>
+                    <div class="row">
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Photograph & Signature" name="nominee-guardian-identification-2">
+                          <label class="form-check-label">
+                            Photograph & Signature
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Pan/Aadhaar Card no." name="nominee-guardian-identification-2">
+                          <label class="form-check-label">
+                            Pan/Aadhaar Card no.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Saving Bank account no." name="nominee-guardian-identification-2">
+                          <label class="form-check-label">
+                            Saving Bank account no.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Proof of Identity" name="nominee-guardian-identification-2">
+                          <label class="form-check-label">
+                            Proof of Identity
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" value="Demat Account ID" name="nominee-guardian-identification-2">
+                          <label class="form-check-label">
+                            Demat Account ID
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-md-flex mt-3 w-md-50 align-items-center">
+                      <label class="text-nowrap">Attach file:</label>
+                      <div class="d-flex align-items-center">
+                        <input type="text" value="Photograph & Signature" id="nominee-guardian-identification-item-2" class="form-control ms-md-3 me-3 bg-white" readonly>
+                        <input type="file" class="d-none" id="nominee-guardian-identification-file-1">
+                        <label for="nominee-guardian-identification-file-1" class="btn btn-dark text-white">Upload</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!--============// end of nominee-3-guardian details ============-->
+                  <div class="text-center my-5">
+                    <button type="submit" class="btn px-5 btn-red">Save</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- ===//end of main-content section === -->
+    </div>
+  </div>
+
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>
