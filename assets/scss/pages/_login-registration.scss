@@ -8,13 +8,28 @@
    }
 
    &--content {
-      height: calc(100vh - 80px); 
+      min-height: calc(100vh - (120px)); 
       background: $color-white;
       padding: 20px;
       box-shadow: 20px 20px 0 #e6e6e6;
+      position: relative;
+
+      @media (min-width: 992px) {
+         &::before{
+            content: "";
+            width: 50%;
+            height: 70%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            box-shadow: rgba($color-black, 0.45) 25px 0 20px -20px;
+            z-index: 0;
+         }
+      }
 
       @media (max-width: 767px) {
-         height: calc(100vh - 40px); 
+         min-height: calc(100vh - 40px); 
          box-shadow: 10px 10px 0 #e6e6e6;
       }
 
@@ -47,19 +62,30 @@
       .logo {
          @media (min-width: 992px) {
             position: absolute;
-            top: 10vh;
+            top: 5vh;
             right: calc(5vw - 10px);
          }
          padding-top: 50px;
          padding-bottom: 50px;
       }
 
+      .min-h-inherit {
+         position: relative;
+         z-index: 1;
+      }
+
       // heading
       .heading-1{
          @include font-style(48px, 300, $color-orange);
+         @media (max-width: 575px) {
+            font-size: 36px;
+         }
       }
       .heading-2{
          @include font-style(35px, 300, $color-orange);
+         @media (max-width: 575px) {
+            font-size: 28px;
+         }
       }
 
       // input
@@ -72,14 +98,22 @@
             border-bottom: 1px solid $color-black;
             @include font-style(20px, 400, $color-black);
 
+            @media (max-width: 575px) {
+               font-size: 18px;
+            }
+
             &::placeholder {
                @extend input;
                border-bottom: none;
             }
+         
          }
 
          .sign-up-link {
             @include font-style(18px, 400, $color-black);
+            @media (max-width: 575px) {
+               font-size: 16px;
+            }
             strong {
                color: $color-orange;
                &:hover {
@@ -95,6 +129,9 @@
             font-size: 20px;
             color: rgba($color-black, 0.8);
             cursor: pointer;
+            @media (max-width: 575px) {
+               font-size: 18px;
+            }
          }
       }
    }

@@ -18,4 +18,12 @@ identificationFilename('input[name=nominee-guardian-identification-2]', '#nomine
 
 
 
-// add address info checkbox function ************
+// input type password to text ************
+function showPassword(inputClass){
+    const input = document.querySelector(inputClass);
+    if (input.type === "password") {
+       input.type = "text";
+    } else {
+       input.type = "password";
+    }
+ }
