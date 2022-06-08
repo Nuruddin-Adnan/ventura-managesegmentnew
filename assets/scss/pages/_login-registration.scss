@@ -146,5 +146,76 @@
             }
          }
       }
+
+      // password validation start
+      .set-password {
+         .form {
+            margin-top: 7rem;
+
+            @media (max-width: 991px) {
+               margin-top: 3rem;
+            }
+         }
+         .password-validation {
+            padding: 0 10%;
+   
+            ul.valid-password {
+               li{
+                  color: $color-black;
+                  &.invalid{
+                     color: red;
+                     &::before{
+                        content: '✖ ';
+                        font-weight: 700;
+                        padding-right: 5px;
+                     }
+                  }
+                  &.valid {
+                     color: green;
+                     &::before{
+                        content: '✔ ';
+                        font-weight: 700;
+                        padding-right: 5px;
+                     }
+                  }
+               }
+            }
+         }
+
+         .confirm-validation-check-icon,
+         .validation-check-icon {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            font-size: 20px;
+            color: green;
+            cursor: pointer;
+            padding-left: 5px;
+            display: none;
+            @media (max-width: 575px) {
+               font-size: 18px;
+            }
+
+            &.invalid {
+               display: none;
+            }
+            &.valid {
+               display: inline;
+            }
+         }
+         .confirm-validation-cross-icon,
+         .validation-cross-icon {
+            @extend .validation-check-icon;
+            color: red;
+
+            &.invalid {
+               display: none;
+            }
+            &.valid {
+               display: inline;
+            }
+         }
+      }
+      // password validation end
    }
 }

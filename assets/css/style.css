@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*=== abstracts css start === */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 /*===// end of abstracts css === */
@@ -595,6 +596,81 @@ label {
   .login-registration--content .form .show-password-btn {
     font-size: 18px;
   }
+}
+.login-registration--content .set-password .form {
+  margin-top: 7rem;
+}
+@media (max-width: 991px) {
+  .login-registration--content .set-password .form {
+    margin-top: 3rem;
+  }
+}
+.login-registration--content .set-password .password-validation {
+  padding: 0 10%;
+}
+.login-registration--content .set-password .password-validation ul.valid-password li {
+  color: #000;
+}
+.login-registration--content .set-password .password-validation ul.valid-password li.invalid {
+  color: red;
+}
+.login-registration--content .set-password .password-validation ul.valid-password li.invalid::before {
+  content: "✖ ";
+  font-weight: 700;
+  padding-right: 5px;
+}
+.login-registration--content .set-password .password-validation ul.valid-password li.valid {
+  color: green;
+}
+.login-registration--content .set-password .password-validation ul.valid-password li.valid::before {
+  content: "✔ ";
+  font-weight: 700;
+  padding-right: 5px;
+}
+.login-registration--content .set-password .confirm-validation-check-icon,
+.login-registration--content .set-password .validation-check-icon,
+.login-registration--content .set-password .confirm-validation-cross-icon,
+.login-registration--content .set-password .validation-cross-icon {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  font-size: 20px;
+  color: green;
+  cursor: pointer;
+  padding-left: 5px;
+  display: none;
+}
+@media (max-width: 575px) {
+  .login-registration--content .set-password .confirm-validation-check-icon,
+.login-registration--content .set-password .validation-check-icon,
+.login-registration--content .set-password .confirm-validation-cross-icon,
+.login-registration--content .set-password .validation-cross-icon {
+    font-size: 18px;
+  }
+}
+.login-registration--content .set-password .confirm-validation-check-icon.invalid,
+.login-registration--content .set-password .validation-check-icon.invalid,
+.login-registration--content .set-password .invalid.confirm-validation-cross-icon,
+.login-registration--content .set-password .invalid.validation-cross-icon {
+  display: none;
+}
+.login-registration--content .set-password .confirm-validation-check-icon.valid,
+.login-registration--content .set-password .validation-check-icon.valid,
+.login-registration--content .set-password .valid.confirm-validation-cross-icon,
+.login-registration--content .set-password .valid.validation-cross-icon {
+  display: inline;
+}
+.login-registration--content .set-password .confirm-validation-cross-icon,
+.login-registration--content .set-password .validation-cross-icon {
+  color: red;
+}
+.login-registration--content .set-password .confirm-validation-cross-icon.invalid,
+.login-registration--content .set-password .validation-cross-icon.invalid {
+  display: none;
+}
+.login-registration--content .set-password .confirm-validation-cross-icon.valid,
+.login-registration--content .set-password .validation-cross-icon.valid {
+  display: inline;
 }
 
 /*===// end of pages css === *//*# sourceMappingURL=style.css.map */
