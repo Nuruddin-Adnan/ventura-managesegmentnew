@@ -12,11 +12,13 @@
   margin: 0;
   padding: 0;
   outline: none;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ::after, ::before {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6, ol, ul, p, address, strong, i {
@@ -33,12 +35,12 @@ a, a:hover {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #000;
 }
 
 .bg-orange {
-  background-color: #ff4106;
+  background-color: #f15a22;
 }
 
 .bg-light-gray {
@@ -46,18 +48,18 @@ body {
 }
 
 .text-orange {
-  color: #ff4106;
+  color: #f15a22;
 }
 
 @media (min-width: 768px) {
   .w-md-50 {
     width: 50%;
   }
-
   .w-md-auto {
     width: auto !important;
   }
 }
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -67,6 +69,7 @@ body {
     min-height: inherit;
   }
 }
+
 /*===// end of base css === */
 /*=== layouts css start === */
 @media (max-width: 1199px) {
@@ -74,6 +77,7 @@ body {
     max-width: 200px;
   }
 }
+
 .header .navbar .user-name {
   position: absolute;
   top: 20px;
@@ -82,32 +86,39 @@ body {
   font-weight: 300;
   color: rgba(0, 0, 0, 0.9);
 }
+
 .header .navbar .user-name strong {
   font-size: 18px;
   font-weight: 700;
   color: #016388;
 }
+
 @media (max-width: 1199px) {
   .header .navbar .user-name {
     left: 0;
     right: auto;
   }
 }
+
 .header .navbar .navbar-nav .nav-link {
   font-size: 16px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.9);
 }
+
 @media (min-width: 1200px) {
   .header .navbar .navbar-nav .nav-link {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
+
 .header .navbar .navbar-nav .nav-link:hover {
-  color: #ff4106;
+  color: #f15a22;
 }
+
 .header .header-bottom {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e7e7e7), to(#fff));
   background-image: linear-gradient(to top, #e7e7e7, #fff);
   border-top: 3px solid #016388;
   padding: 5px 0;
@@ -120,10 +131,17 @@ body {
   background-color: #f2f2f2;
   border-radius: 4px;
   padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .side-nav ul li a {
   font-size: 16px;
   font-weight: 700;
@@ -132,8 +150,9 @@ body {
   padding-left: 0.5rem;
   display: block;
 }
+
 .side-nav ul li a.active {
-  color: #ff4106;
+  color: #f15a22;
 }
 
 /*===// end of layouts css === */
@@ -142,6 +161,7 @@ body {
   background: #016388;
   color: #fff;
 }
+
 .btn-tilt:hover {
   color: #fff;
   background: #01516f;
@@ -151,6 +171,7 @@ body {
   background: #f21703;
   color: #fff;
 }
+
 .btn-red:hover {
   color: #fff;
   background: #d91503;
@@ -160,6 +181,7 @@ body {
   background: #696768;
   color: #fff;
 }
+
 .btn-secondary:hover {
   color: #fff;
   background: #5c5a5b;
@@ -169,6 +191,7 @@ body {
   background: #fe6b31;
   color: #fff;
 }
+
 .btn-orange:hover {
   color: #fff;
   background: #fe5918;
@@ -178,37 +201,44 @@ body {
   padding: 2px 10px;
   right: 15px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .main-content--heading {
   font-size: 36px;
   font-weight: 300;
-  color: #ff4106;
+  color: #f15a22;
 }
 
 #segments.accordion .accordion-item {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 #segments.accordion .accordion-button {
   font-size: 18px;
   font-weight: 300;
   color: black;
   background-color: #f8f7fd;
 }
+
 #segments.accordion .accordion-button:focus {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
+
 #segments.accordion .accordion-button .badge {
   min-width: 75px;
   position: absolute;
   right: 60px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   font-size: 12px;
   font-weight: 300;
   color: #fff;
 }
+
 #segments.accordion .accordion-button .badge.disabled {
   background-color: #827877;
 }
@@ -216,26 +246,34 @@ body {
 .bank-details .accordionheader {
   font-size: 24px;
   font-weight: 400;
-  color: #ff4106;
+  color: #f15a22;
   padding-bottom: 12px;
 }
+
 .bank-details a {
   font-size: 13px;
   font-weight: 700;
-  color: #ff4106;
+  color: #f15a22;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 5px;
 }
+
 .bank-details p {
   white-space: break-word;
   font-size: 15px;
   font-weight: 400;
   color: #000;
 }
+
 .bank-details .logo-col {
   width: 12%;
 }
+
 .bank-details .text-col {
   width: 88%;
 }
@@ -245,11 +283,12 @@ body {
   font-weight: 300;
   color: black;
   background-color: #e5e5e5;
-  border-left: 2px solid #ff4106;
+  border-left: 2px solid #f15a22;
 }
+
 .panel.panel-bottom {
   border-left: 0;
-  border-bottom: 2px solid #ff4106;
+  border-bottom: 2px solid #f15a22;
 }
 
 label {
@@ -266,8 +305,8 @@ label {
 }
 
 .form-check-input:checked {
-  background-color: #ff4106;
-  border-color: #ff4106;
+  background-color: #f15a22;
+  border-color: #f15a22;
 }
 
 .nab-tab .btn {
@@ -276,6 +315,7 @@ label {
   font-size: 14px;
   color: #000;
 }
+
 .nab-tab .btn.active {
   background-color: #dde6ef;
 }
@@ -288,40 +328,54 @@ label {
   color: #3d3d41;
   white-space: nowrap;
 }
-.personal-details .login-registration--content .form input::-moz-placeholder, .login-registration--content .form .personal-details input::-moz-placeholder, .activaiton-page .login-registration--content .form input::-moz-placeholder, .login-registration--content .form .activaiton-page input::-moz-placeholder {
+
+.personal-details .label, .personal-details option, .personal-details input, .personal-details .login-registration--content .form input::-webkit-input-placeholder, .login-registration--content .form .personal-details input::-webkit-input-placeholder, .personal-details select, .activaiton-page .label, .activaiton-page option, .activaiton-page input, .activaiton-page .login-registration--content .form input::-webkit-input-placeholder, .login-registration--content .form .activaiton-page input::-webkit-input-placeholder, .activaiton-page select {
   font-size: 14px;
   font-weight: 500;
   color: #3d3d41;
 }
-.personal-details .login-registration--content .form input:-ms-input-placeholder, .login-registration--content .form .personal-details input:-ms-input-placeholder, .activaiton-page .login-registration--content .form input:-ms-input-placeholder, .login-registration--content .form .activaiton-page input:-ms-input-placeholder {
+
+.personal-details .label, .personal-details option, .personal-details input, .personal-details .login-registration--content .form input:-ms-input-placeholder, .login-registration--content .form .personal-details input:-ms-input-placeholder, .personal-details select, .activaiton-page .label, .activaiton-page option, .activaiton-page input, .activaiton-page .login-registration--content .form input:-ms-input-placeholder, .login-registration--content .form .activaiton-page input:-ms-input-placeholder, .activaiton-page select {
   font-size: 14px;
   font-weight: 500;
   color: #3d3d41;
 }
+
+.personal-details .label, .personal-details option, .personal-details input, .personal-details .login-registration--content .form input::-ms-input-placeholder, .login-registration--content .form .personal-details input::-ms-input-placeholder, .personal-details select, .activaiton-page .label, .activaiton-page option, .activaiton-page input, .activaiton-page .login-registration--content .form input::-ms-input-placeholder, .login-registration--content .form .activaiton-page input::-ms-input-placeholder, .activaiton-page select {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3d3d41;
+}
+
 .personal-details .label, .personal-details option, .personal-details input, .personal-details .login-registration--content .form input::placeholder, .login-registration--content .form .personal-details input::placeholder, .personal-details select, .activaiton-page .label, .activaiton-page option, .activaiton-page input, .activaiton-page .login-registration--content .form input::placeholder, .login-registration--content .form .activaiton-page input::placeholder, .activaiton-page select {
   font-size: 14px;
   font-weight: 500;
   color: #3d3d41;
 }
+
 .personal-details .client-identity, .activaiton-page .client-identity {
   background: #f4f4fc;
   padding: 18px 0 18px 15px;
   margin-bottom: 7px;
 }
+
 .personal-details .client-identity .sub-heading, .activaiton-page .client-identity .sub-heading {
   font-size: 18px;
   font-weight: 400;
-  color: #ff4106;
+  color: #f15a22;
   line-height: 36px;
 }
+
 .personal-details .accordion-item, .activaiton-page .accordion-item {
   margin-bottom: 2px;
   border: none !important;
 }
+
 .personal-details .accordion-item .accordion-header, .activaiton-page .accordion-item .accordion-header {
   background: #f7f7f7;
   padding: 18px 30px 18px 15px;
 }
+
 @media screen and (min-width: 768px) {
   .personal-details .accordion-item .accordion-header .section-start, .activaiton-page .accordion-item .accordion-header .section-start {
     width: 40%;
@@ -334,6 +388,7 @@ label {
     width: 35%;
   }
 }
+
 @media screen and (min-width: 1400px) {
   .personal-details .accordion-item .accordion-header .section-start, .activaiton-page .accordion-item .accordion-header .section-start {
     width: 40%;
@@ -346,67 +401,81 @@ label {
     width: 31%;
   }
 }
+
 .personal-details .accordion-item .accordion-header img, .activaiton-page .accordion-item .accordion-header img {
   height: 25px;
   cursor: pointer;
 }
+
 .personal-details .accordion-item .accordion-header p, .activaiton-page .accordion-item .accordion-header p {
   font-size: 14px;
   font-weight: 400;
   color: #3d3d41;
 }
+
 .personal-details .accordion-item .accordion-body, .activaiton-page .accordion-item .accordion-body {
   border: 2px solid #f7f7f7;
   padding: 18px 30px 18px 15px !important;
 }
+
 .personal-details .accordion-item .accordion-body .accordion-body-header, .activaiton-page .accordion-item .accordion-body .accordion-body-header {
   font-size: 18px;
   font-weight: 400;
-  color: #ff4106;
+  color: #f15a22;
   padding-bottom: 10px;
 }
+
 .personal-details .accordion-item .accordion-body .income-Rng, .personal-details .accordion-item .accordion-body .occupation-label, .activaiton-page .accordion-item .accordion-body .income-Rng, .activaiton-page .accordion-item .accordion-body .occupation-label {
   font-size: 15px;
   font-weight: 400;
   color: #000;
 }
+
 .personal-details .accordion-item .accordion-body .otp-popup, .activaiton-page .accordion-item .accordion-body .otp-popup {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 70%;
 }
+
 @media screen and (max-width: 575px) {
   .personal-details .accordion-item .accordion-body .otp-popup, .activaiton-page .accordion-item .accordion-body .otp-popup {
     width: 90%;
   }
 }
+
 .personal-details .accordion-item .accordion-body .otp-popup h3, .activaiton-page .accordion-item .accordion-body .otp-popup h3 {
   font-size: 15px;
   font-weight: 400;
   color: #000;
 }
+
 .personal-details .accordion-item .accordion-body .otp-popup .otp, .activaiton-page .accordion-item .accordion-body .otp-popup .otp {
   border: 0;
   border-bottom: 1px solid #000;
   width: 50px;
   text-align: center;
 }
+
 @media screen and (max-width: 575px) {
   .personal-details .accordion-item .accordion-body .otp-popup .otp, .activaiton-page .accordion-item .accordion-body .otp-popup .otp {
     width: 35px;
   }
 }
+
 .personal-details .links, .activaiton-page .links {
   padding-top: 10px;
 }
+
 .personal-details .links .details-link a, .activaiton-page .links .details-link a {
   text-decoration: underline;
   margin-right: 5px;
   font-size: 15px;
   font-weight: 400;
-  color: #ff4106;
+  color: #f15a22;
 }
+
 .personal-details .links .details-link span, .activaiton-page .links .details-link span {
   font-size: 15px;
   font-weight: 400;
@@ -418,18 +487,22 @@ label {
   background: #f2f2f2;
   min-height: 100vh;
 }
+
 @media (max-width: 767px) {
   .login-registration {
     padding: 20px 36px 20px 30px;
   }
 }
+
 .login-registration--content {
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - (200px));
   background: #fff;
   padding: 20px;
-  box-shadow: 20px 20px 0 #e6e6e6;
+  -webkit-box-shadow: 20px 20px 0 #e6e6e6;
+          box-shadow: 20px 20px 0 #e6e6e6;
   position: relative;
 }
+
 @media (min-width: 992px) {
   .login-registration--content::before {
     content: "";
@@ -438,8 +511,10 @@ label {
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-50%);
-    box-shadow: rgba(0, 0, 0, 0.45) 25px 0 20px -20px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.45) 25px 0 20px -20px;
+            box-shadow: rgba(0, 0, 0, 0.45) 25px 0 20px -20px;
     z-index: 0;
   }
   .login-registration--content::after {
@@ -449,17 +524,21 @@ label {
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     z-index: 0;
     background: #fff;
   }
 }
+
 @media (max-width: 767px) {
   .login-registration--content {
     min-height: calc(100vh - 40px);
-    box-shadow: 10px 10px 0 #e6e6e6;
+    -webkit-box-shadow: 10px 10px 0 #e6e6e6;
+            box-shadow: 10px 10px 0 #e6e6e6;
   }
 }
+
 .login-registration--content .dots-bottom-right,
 .login-registration--content .dots-top-right,
 .login-registration--content .dots-bottom-left,
@@ -467,26 +546,32 @@ label {
   position: absolute;
   padding: 20px;
 }
+
 .login-registration--content .dots-bottom-right {
   bottom: 0;
   right: 0;
 }
+
 .login-registration--content .dots-top-right {
   top: 0;
   right: 0;
 }
+
 .login-registration--content .dots-bottom-left {
   bottom: 0;
   left: 0;
 }
+
 .login-registration--content .dots-top-left {
   top: 0;
   left: 0;
 }
+
 .login-registration--content .logo {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
 @media (min-width: 992px) {
   .login-registration--content .logo {
     position: absolute;
@@ -494,34 +579,41 @@ label {
     right: calc(5vw - 10px);
   }
 }
+
 .login-registration--content .min-h-inherit {
   position: relative;
   z-index: 1;
 }
+
 .login-registration--content .heading-1 {
   font-size: 48px;
   font-weight: 300;
-  color: #ff4106;
+  color: #f15a22;
 }
+
 @media (max-width: 575px) {
   .login-registration--content .heading-1 {
     font-size: 36px;
   }
 }
+
 .login-registration--content .heading-2 {
   font-size: 35px;
   font-weight: 300;
-  color: #ff4106;
+  color: #f15a22;
 }
+
 @media (max-width: 575px) {
   .login-registration--content .heading-2 {
     font-size: 28px;
   }
 }
+
 .login-registration--content .form {
   padding: 0 10%;
 }
-.login-registration--content .form input::-moz-placeholder {
+
+.login-registration--content .form input, .login-registration--content .form input::-webkit-input-placeholder {
   width: 100%;
   display: block;
   border: none;
@@ -530,7 +622,8 @@ label {
   font-weight: 400;
   color: #000;
 }
-.login-registration--content .form input:-ms-input-placeholder {
+
+.login-registration--content .form input, .login-registration--content .form input:-ms-input-placeholder {
   width: 100%;
   display: block;
   border: none;
@@ -539,6 +632,17 @@ label {
   font-weight: 400;
   color: #000;
 }
+
+.login-registration--content .form input, .login-registration--content .form input::-ms-input-placeholder {
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+}
+
 .login-registration--content .form input, .login-registration--content .form input::placeholder {
   width: 100%;
   display: block;
@@ -548,42 +652,58 @@ label {
   font-weight: 400;
   color: #000;
 }
+
 @media (max-width: 575px) {
-  .login-registration--content .form input::-moz-placeholder {
+  .login-registration--content .form input, .login-registration--content .form input::-webkit-input-placeholder {
     font-size: 18px;
   }
-  .login-registration--content .form input:-ms-input-placeholder {
+  .login-registration--content .form input, .login-registration--content .form input:-ms-input-placeholder {
+    font-size: 18px;
+  }
+  .login-registration--content .form input, .login-registration--content .form input::-ms-input-placeholder {
     font-size: 18px;
   }
   .login-registration--content .form input, .login-registration--content .form input::placeholder {
     font-size: 18px;
   }
 }
-.login-registration--content .form input::-moz-placeholder {
+
+.login-registration--content .form input::-webkit-input-placeholder {
   border-bottom: none;
 }
+
 .login-registration--content .form input:-ms-input-placeholder {
   border-bottom: none;
 }
+
+.login-registration--content .form input::-ms-input-placeholder {
+  border-bottom: none;
+}
+
 .login-registration--content .form input::placeholder {
   border-bottom: none;
 }
+
 .login-registration--content .form .sign-up-link {
   font-size: 18px;
   font-weight: 400;
   color: #000;
 }
+
 @media (max-width: 575px) {
   .login-registration--content .form .sign-up-link {
     font-size: 16px;
   }
 }
+
 .login-registration--content .form .sign-up-link strong {
-  color: #ff4106;
+  color: #f15a22;
 }
+
 .login-registration--content .form .sign-up-link strong:hover {
   text-decoration: underline;
 }
+
 .login-registration--content .form .show-password-btn {
   position: absolute;
   right: 0;
@@ -592,41 +712,51 @@ label {
   color: rgba(131, 131, 131, 0.7);
   cursor: pointer;
 }
+
 @media (max-width: 575px) {
   .login-registration--content .form .show-password-btn {
     font-size: 18px;
   }
 }
+
 .login-registration--content .set-password .form {
   margin-top: 7rem;
 }
+
 @media (max-width: 991px) {
   .login-registration--content .set-password .form {
     margin-top: 3rem;
   }
 }
+
 .login-registration--content .set-password .password-validation {
   padding: 0 10%;
 }
+
 .login-registration--content .set-password .password-validation ul.valid-password li {
   color: #000;
 }
+
 .login-registration--content .set-password .password-validation ul.valid-password li.invalid {
   color: red;
 }
+
 .login-registration--content .set-password .password-validation ul.valid-password li.invalid::before {
-  content: "✖ ";
+  content: '✖ ';
   font-weight: 700;
   padding-right: 5px;
 }
+
 .login-registration--content .set-password .password-validation ul.valid-password li.valid {
   color: green;
 }
+
 .login-registration--content .set-password .password-validation ul.valid-password li.valid::before {
-  content: "✔ ";
+  content: '✔ ';
   font-weight: 700;
   padding-right: 5px;
 }
+
 .login-registration--content .set-password .confirm-validation-check-icon,
 .login-registration--content .set-password .validation-check-icon,
 .login-registration--content .set-password .confirm-validation-cross-icon,
@@ -636,41 +766,142 @@ label {
   top: 0;
   font-size: 20px;
   color: green;
-  cursor: pointer;
   padding-left: 5px;
   display: none;
 }
+
 @media (max-width: 575px) {
   .login-registration--content .set-password .confirm-validation-check-icon,
-.login-registration--content .set-password .validation-check-icon,
-.login-registration--content .set-password .confirm-validation-cross-icon,
-.login-registration--content .set-password .validation-cross-icon {
+  .login-registration--content .set-password .validation-check-icon,
+  .login-registration--content .set-password .confirm-validation-cross-icon,
+  .login-registration--content .set-password .validation-cross-icon {
     font-size: 18px;
   }
 }
+
 .login-registration--content .set-password .confirm-validation-check-icon.invalid,
 .login-registration--content .set-password .validation-check-icon.invalid,
 .login-registration--content .set-password .invalid.confirm-validation-cross-icon,
 .login-registration--content .set-password .invalid.validation-cross-icon {
   display: none;
 }
+
 .login-registration--content .set-password .confirm-validation-check-icon.valid,
 .login-registration--content .set-password .validation-check-icon.valid,
 .login-registration--content .set-password .valid.confirm-validation-cross-icon,
 .login-registration--content .set-password .valid.validation-cross-icon {
   display: inline;
 }
+
 .login-registration--content .set-password .confirm-validation-cross-icon,
 .login-registration--content .set-password .validation-cross-icon {
   color: red;
 }
+
 .login-registration--content .set-password .confirm-validation-cross-icon.invalid,
 .login-registration--content .set-password .validation-cross-icon.invalid {
   display: none;
 }
+
 .login-registration--content .set-password .confirm-validation-cross-icon.valid,
 .login-registration--content .set-password .validation-cross-icon.valid {
   display: inline;
 }
 
-/*===// end of pages css === *//*# sourceMappingURL=style.css.map */
+.login-registration.confirm-otp input, .login-registration.confirm-otp .login-registration--content .form input::-webkit-input-placeholder, .login-registration--content .form .login-registration.confirm-otp input::-webkit-input-placeholder {
+  border: 1px solid #72aeed;
+  border-radius: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 60px;
+  margin: 5px;
+}
+
+.login-registration.confirm-otp input, .login-registration.confirm-otp .login-registration--content .form input:-ms-input-placeholder, .login-registration--content .form .login-registration.confirm-otp input:-ms-input-placeholder {
+  border: 1px solid #72aeed;
+  border-radius: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 60px;
+  margin: 5px;
+}
+
+.login-registration.confirm-otp input, .login-registration.confirm-otp .login-registration--content .form input::-ms-input-placeholder, .login-registration--content .form .login-registration.confirm-otp input::-ms-input-placeholder {
+  border: 1px solid #72aeed;
+  border-radius: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 60px;
+  margin: 5px;
+}
+
+.login-registration.confirm-otp input, .login-registration.confirm-otp .login-registration--content .form input::placeholder, .login-registration--content .form .login-registration.confirm-otp input::placeholder {
+  border: 1px solid #72aeed;
+  border-radius: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 60px;
+  margin: 5px;
+}
+
+.login-registration.confirm-otp input:focus, .login-registration.confirm-otp .login-registration--content .form input:focus::-webkit-input-placeholder, .login-registration--content .form .login-registration.confirm-otp input:focus::-webkit-input-placeholder {
+  border-color: #f15a22;
+}
+
+.login-registration.confirm-otp input:focus, .login-registration.confirm-otp .login-registration--content .form input:focus:-ms-input-placeholder, .login-registration--content .form .login-registration.confirm-otp input:focus:-ms-input-placeholder {
+  border-color: #f15a22;
+}
+
+.login-registration.confirm-otp input:focus, .login-registration.confirm-otp .login-registration--content .form input:focus::-ms-input-placeholder, .login-registration--content .form .login-registration.confirm-otp input:focus::-ms-input-placeholder {
+  border-color: #f15a22;
+}
+
+.login-registration.confirm-otp input:focus, .login-registration.confirm-otp .login-registration--content .form input:focus::placeholder, .login-registration--content .form .login-registration.confirm-otp input:focus::placeholder {
+  border-color: #f15a22;
+}
+
+@media (max-width: 575px) {
+  .login-registration.confirm-otp input, .login-registration.confirm-otp .login-registration--content .form input::-webkit-input-placeholder, .login-registration--content .form .login-registration.confirm-otp input::-webkit-input-placeholder {
+    height: 40px;
+    margin: 3px;
+    border-radius: 0.5rem;
+  }
+  .login-registration.confirm-otp input, .login-registration.confirm-otp .login-registration--content .form input:-ms-input-placeholder, .login-registration--content .form .login-registration.confirm-otp input:-ms-input-placeholder {
+    height: 40px;
+    margin: 3px;
+    border-radius: 0.5rem;
+  }
+  .login-registration.confirm-otp input, .login-registration.confirm-otp .login-registration--content .form input::-ms-input-placeholder, .login-registration--content .form .login-registration.confirm-otp input::-ms-input-placeholder {
+    height: 40px;
+    margin: 3px;
+    border-radius: 0.5rem;
+  }
+  .login-registration.confirm-otp input, .login-registration.confirm-otp .login-registration--content .form input::placeholder, .login-registration--content .form .login-registration.confirm-otp input::placeholder {
+    height: 40px;
+    margin: 3px;
+    border-radius: 0.5rem;
+  }
+}
+
+.login-registration.confirm-otp input::-webkit-input-placeholder {
+  border: none !important;
+}
+
+.login-registration.confirm-otp input:-ms-input-placeholder {
+  border: none !important;
+}
+
+.login-registration.confirm-otp input::-ms-input-placeholder {
+  border: none !important;
+}
+
+.login-registration.confirm-otp input::placeholder {
+  border: none !important;
+}
+
+/*===// end of pages css === */
+/*# sourceMappingURL=style.css.map */

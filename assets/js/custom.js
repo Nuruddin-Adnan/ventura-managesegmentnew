@@ -30,178 +30,228 @@ function showPassword(inputClass){
 
 
 // ################# password validation start #################
-{
-    let password = document.querySelector('.password-input');
-    let confirmPassword = document.querySelector('.confirm-password-input');
 
+if(document.querySelector('.set-password')){
 
-    let validPassword = {
-      charLength: document.querySelector('.valid-password .length'),
-      lowercase: document.querySelector('.valid-password .lowercase'),
-      uppercase: document.querySelector('.valid-password .uppercase'),
-      number: document.querySelector('.valid-password .number'),
-      special: document.querySelector('.valid-password .special')
-    };
-        
-    let pattern = {
+  let password = document.querySelector('.password-input');
+  let confirmPassword = document.querySelector('.confirm-password-input');
+
+  let validPassword = {
+    charLength: document.querySelector('.valid-password .length'),
+    lowercase: document.querySelector('.valid-password .lowercase'),
+    uppercase: document.querySelector('.valid-password .uppercase'),
+    number: document.querySelector('.valid-password .number'),
+    special: document.querySelector('.valid-password .special')
+  };
       
-      charLength: function() {
-        if( password.value.length >= 8 && password.value.length <= 16 ) {
-          return true;
-        }
-      },
+  let pattern = {
+    
+    charLength: function() {
+      if( password.value.length >= 8 && password.value.length <= 16 ) {
+        return true;
+      }
+    },
+    
+    lowercase: function() {
+      let regex = /^(?=.*[a-z]).+$/; // Lowercase character pattern
+      if( regex.test(password.value) ) {
+        return true;
+      }
+    },
+    
+    uppercase: function() {
+      let regex = /^(?=.*[A-Z]).+$/; // Uppercase character pattern
+      if( regex.test(password.value) ) {
+        return true;
+      }
+    },
+    
+    number: function() {
+      let regex = /^(?=.*[0-9]).+$/; // Number check
+      if( regex.test(password.value) ) {
+        return true;
+      }
+    },
+    
+    special: function() {
+      let regex = /^(?=.*[_\W]).+$/; // Special character 
+      if( regex.test(password.value) ) {
+        return true;
+      }
+    }   
+      };
       
-      lowercase: function() {
-        let regex = /^(?=.*[a-z]).+$/; // Lowercase character pattern
-        if( regex.test(password.value) ) {
-          return true;
-        }
-      },
+  // Listen for keyup action on password field
+  password.addEventListener('keyup', function (){
+    patternTest( pattern.charLength(), validPassword.charLength );
+    patternTest( pattern.lowercase(), validPassword.lowercase );
+    patternTest( pattern.uppercase(), validPassword.uppercase );
+    patternTest( pattern.number(), validPassword.number );
+    patternTest( pattern.special(), validPassword.special );
       
-      uppercase: function() {
-        let regex = /^(?=.*[A-Z]).+$/; // Uppercase character pattern
-        if( regex.test(password.value) ) {
-          return true;
-        }
-      },
+    // Check that all requirements are fulfilled
+    if( hasClass(validPassword.charLength, 'valid') &&
+        hasClass(validPassword.lowercase, 'valid') && 
+        hasClass(validPassword.uppercase, 'valid') && 
+        hasClass(validPassword.number, 'valid') &&
+        hasClass(validPassword.special, 'valid')
+      ) {
+      addClass(password.parentElement, 'valid');
+      removeClass(password.parentElement, 'invalid');
+    }
+    else {
+      removeClass(password.parentElement, 'valid');
+      addClass(password.parentElement, 'invalid');
+    }
+
+    //Add check or crose icon
+    checkPasswordValidationComplete();
+
+    //confirm password validation with check or cross icon
+    confirmPasswordValidation();
+
+    // formSubmit button disabled/enabled
+    formSubmitButton();
+  });
+
+  // Listen for keyup action on confirm password field
+  confirmPassword.addEventListener('keyup', function(){
+      confirmPasswordValidation();
+
+      // formSubmit button disabled/enabled
+      formSubmitButton();
+  });
+    
+  // Pattern Test function
+  function patternTest(pattern, response) {
+    if(pattern) {
+      addClass(response, 'valid');
+      removeClass(response, 'invalid');
+    }
+    else {
+      removeClass(response, 'valid');
+      addClass(response, 'invalid');
+    }
+  }
+  
+  // Has Class Function 
+  function hasClass(el, className) {
+    if (el.classList) {
+      return el.classList.contains(className);    
+    }
+    else {
+      new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className); 
+    }
+  }
       
-      number: function() {
-        let regex = /^(?=.*[0-9]).+$/; // Number check
-        if( regex.test(password.value) ) {
-          return true;
-        }
-      },
+  // Add Class Function
+  function addClass(el, className) {
+    if (el.classList) {
+      el.classList.add(className);
+    }
+    else {
+      el.className += ' ' + className;
+    }
+  }
+    
+  // Remove Class Function
+  function removeClass(el, className) {
+    if (el.classList)
+      el.classList.remove(className);
+    else
+      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+  }
       
-      special: function() {
-        let regex = /^(?=.*[_\W]).+$/; // Special character 
-        if( regex.test(password.value) ) {
-          return true;
-        }
-      }   
-        };
-        
-    // Listen for keyup action on password field
-    password.addEventListener('keyup', function (){
-      patternTest( pattern.charLength(), validPassword.charLength );
-      patternTest( pattern.lowercase(), validPassword.lowercase );
-      patternTest( pattern.uppercase(), validPassword.uppercase );
-      patternTest( pattern.number(), validPassword.number );
-      patternTest( pattern.special(), validPassword.special );
-        
+  // password validation-check-complete
+  function checkPasswordValidationComplete(){
+      let validationCheckIcon =  document.querySelector('.validation-check-icon');
+      let validationCrossIcon =  document.querySelector('.validation-cross-icon');
+
       // Check that all requirements are fulfilled
       if( hasClass(validPassword.charLength, 'valid') &&
-         hasClass(validPassword.lowercase, 'valid') && 
-         hasClass(validPassword.uppercase, 'valid') && 
-         hasClass(validPassword.number, 'valid') &&
-         hasClass(validPassword.special, 'valid')
-        ) {
-        addClass(password.parentElement, 'valid');
-        removeClass(password.parentElement, 'invalid');
+          hasClass(validPassword.lowercase, 'valid') && 
+          hasClass(validPassword.uppercase, 'valid') && 
+          hasClass(validPassword.number, 'valid') &&
+          hasClass(validPassword.special, 'valid')
+      ) {
+          addClass(validationCheckIcon, 'valid');
+          removeClass(validationCheckIcon, 'invalid');
+          addClass(validationCrossIcon, 'invalid');
+          removeClass(validationCrossIcon, 'valid');
       }
       else {
-        removeClass(password.parentElement, 'valid');
-        addClass(password.parentElement, 'invalid');
+          addClass(validationCheckIcon, 'invalid');
+          removeClass(validationCheckIcon, 'valid');
+          addClass(validationCrossIcon, 'valid');
+          removeClass(validationCrossIcon, 'invalid');
       }
+  }
 
-     //Add check or crose icon
-      checkPasswordValidationComplete();
+  // confirm password validation
+  function confirmPasswordValidation(){
+      let confirmValidationCheckIcon =  document.querySelector('.confirm-validation-check-icon');
+      let confirmValidationCrossIcon =  document.querySelector('.confirm-validation-cross-icon');
 
-      //confirm password validation with check or cross icon
-      confirmPasswordValidation();
-    });
-
-
-    // Listen for keyup action on confirm password field
-    confirmPassword.addEventListener('keyup', function(){
-        confirmPasswordValidation();
-    });
-    
-    
-    // Pattern Test function
-    function patternTest(pattern, response) {
-      if(pattern) {
-        addClass(response, 'valid');
-        removeClass(response, 'invalid');
+      if(password.value === confirmPassword.value){
+          addClass(confirmValidationCheckIcon, 'valid');
+          removeClass(confirmValidationCheckIcon, 'invalid');
+          addClass(confirmValidationCrossIcon, 'invalid');
+          removeClass(confirmValidationCrossIcon, 'valid');
       }
       else {
-        removeClass(response, 'valid');
-        addClass(response, 'invalid');
+          addClass(confirmValidationCheckIcon, 'invalid');
+          removeClass(confirmValidationCheckIcon, 'valid');
+          addClass(confirmValidationCrossIcon, 'valid');
+          removeClass(confirmValidationCrossIcon, 'invalid');
       }
-    }
-    
-    // Has Class Function 
-    function hasClass(el, className) {
-      if (el.classList) {
-        return el.classList.contains(className);    
-      }
-      else {
-        new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className); 
-      }
-    }
-        
-    // Add Class Function
-    function addClass(el, className) {
-      if (el.classList) {
-        el.classList.add(className);
-      }
-      else {
-        el.className += ' ' + className;
-      }
-    }
-      
-    // Remove Class Function
-    function removeClass(el, className) {
-      if (el.classList)
-        el.classList.remove(className);
-      else
-        el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-    }
-        
-    // password validation-check-complete
-    function checkPasswordValidationComplete(){
-        let validationCheckIcon =  document.querySelector('.validation-check-icon');
-        let validationCrossIcon =  document.querySelector('.validation-cross-icon');
+  }
 
+  // submit button disabled/enabled
+  function formSubmitButton(){
         // Check that all requirements are fulfilled
         if( hasClass(validPassword.charLength, 'valid') &&
-            hasClass(validPassword.lowercase, 'valid') && 
-            hasClass(validPassword.uppercase, 'valid') && 
-            hasClass(validPassword.number, 'valid') &&
-            hasClass(validPassword.special, 'valid')
+        hasClass(validPassword.lowercase, 'valid') && 
+        hasClass(validPassword.uppercase, 'valid') && 
+        hasClass(validPassword.number, 'valid') &&
+        hasClass(validPassword.special, 'valid') &&
+        (password.value === confirmPassword.value)
         ) {
-            addClass(validationCheckIcon, 'valid');
-            removeClass(validationCheckIcon, 'invalid');
-            addClass(validationCrossIcon, 'invalid');
-            removeClass(validationCrossIcon, 'valid');
+            document.querySelector('.submit-btn').removeAttribute('disabled');
         }
         else {
-            addClass(validationCheckIcon, 'invalid');
-            removeClass(validationCheckIcon, 'valid');
-            addClass(validationCrossIcon, 'valid');
-            removeClass(validationCrossIcon, 'invalid');
+          document.querySelector('.submit-btn').setAttribute('disabled', 'true');
         }
-    }
-
-    // confirm password validation
-    function confirmPasswordValidation(){
-        let confirmValidationCheckIcon =  document.querySelector('.confirm-validation-check-icon');
-        let confirmValidationCrossIcon =  document.querySelector('.confirm-validation-cross-icon');
-
-        if(password.value === confirmPassword.value){
-            addClass(confirmValidationCheckIcon, 'valid');
-            removeClass(confirmValidationCheckIcon, 'invalid');
-            addClass(confirmValidationCrossIcon, 'invalid');
-            removeClass(confirmValidationCrossIcon, 'valid');
-        }
-        else {
-            addClass(confirmValidationCheckIcon, 'invalid');
-            removeClass(confirmValidationCheckIcon, 'valid');
-            addClass(confirmValidationCrossIcon, 'valid');
-            removeClass(confirmValidationCrossIcon, 'invalid');
-        }
-    }
-
-    
-
+  }
 }
 // ################# end of password validation #################
+
+
+// ################# otp varification #################
+document.addEventListener("DOMContentLoaded", function (event) {
+  function OTPInput(element) {
+      const inputs = document.querySelectorAll(element);
+      for (let i = 0; i < inputs.length; i++) {
+          inputs[i].addEventListener("keydown", function (event) {
+              if (event.key === "Backspace") {
+                  inputs[i].value = "";
+                  if (i !== 0) inputs[i - 1].focus();
+              } else {
+                  if (i === inputs.length - 1 && inputs[i].value !== "") {
+                      return true;
+                  } else if (event.keyCode > 47 && event.keyCode < 58) {
+                      inputs[i].value = event.key;
+                      if (i !== inputs.length - 1) inputs[i + 1].focus();
+                      event.preventDefault();
+                  } else if (event.keyCode > 64 && event.keyCode < 91) {
+                      inputs[i].value = String.fromCharCode(event.keyCode);
+                      if (i !== inputs.length - 1) inputs[i + 1].focus();
+                      event.preventDefault();
+                  }
+              }
+          });
+      }
+  }
+  OTPInput("#otp > *[id]");
+});
+
+// ################# end of otp varification #################
