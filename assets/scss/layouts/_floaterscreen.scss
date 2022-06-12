@@ -1,0 +1,20 @@
+.floaterscreen {
+
+    .login-registration--content {
+        min-height: calc(100vh - (200px + 6rem));
+        
+        @media (max-width: 767px) {
+            min-height: calc(100vh - (80px + 6rem));
+        }
+
+        &::before {
+            width: 0;
+            box-shadow: none;
+        }
+    }
+
+    .min-h-inherit{
+        min-height: inherit;
+        box-shadow: 10px 10px 8px rgba($color-black, 0.06);
+    }
+}

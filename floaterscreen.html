@@ -12,7 +12,7 @@
 </head>
 <body>
    <!--###### floater screen start ######-->   
-   <div class="login-registration position-relative">
+   <div class="login-registration position-relative floaterscreen">
       <div class="contianer-fluid">
          <div class="login-registration--content position-relative">
             <img src="assets/images/login-registration/corner-dots-top-left.png" alt="dots-icon" class="dots-top-left"> 
@@ -20,38 +20,15 @@
             <img src="assets/images/login-registration/corner-dots-top-right.png" alt="dots-icon" class="dots-top-right"> 
             <img src="assets/images/login-registration/corner-dots-bottom-right.png" alt="dots-icon" class="dots-bottom-right"> 
       
-            <div class="text-lg-end text-center logo pt-xxl-5 pt-lg-4">
-               <a href="#"><img src="assets/images/logo-plan.png" alt="logo" class="img-fluid"></a>
+            <div class="d-flex align-items-center justify-content-center min-h-inherit text-center border bg-white m-lg-5 m-4">
+               <div>
+                  <h1 class="heading-1 text-dark fs-1">New Password has been set!</h1>
+                  <a href="#" class="btn btn-orange px-4 mt-4 mb-2">Login Now</a>
+                  <br>
+                  <a href="#" class="text-orange fs-6"><u><em>Set New Pin</em></u></a>
+               </div>
             </div>
 
-            <div class="row align-items-center min-h-inherit">
-               <div class="col-lg-6 d-flex justify-content-center">
-                  <h1 class="heading-1">Change your Pin <img src="assets/images/login-registration/arrow-dots.png" alt="icon" class="img-fluid"></h1>
-               </div>
-               <div class="col-lg-6">
-                  <form class="form mt-lg-0 mt-5">
-                     <div class="my-lg-5 my-4 text-lg-start text-center">
-                        <h3 class="heading-2 mb-2">Hi Shashank</h3>
-                        <h5 class="fw-normal">Reset your Pin</h5>
-                     </div>
-                     <div class="position-relative mb-4">
-                        <i class="fas fa-eye-slash show-password-btn" onclick="showPassword('#old-pin')"></i>
-                        <input type="password" placeholder="Enter old Pin" id="old-pin">
-                     </div>
-                     <div class="position-relative mb-4">
-                        <i class="fas fa-eye-slash show-password-btn" onclick="showPassword('#new-pin')"></i>
-                        <input type="password" placeholder="Enter New 6 digit Pin" id="new-pin">
-                     </div>
-                     <div class="position-relative">
-                        <i class="fas fa-eye-slash show-password-btn" onclick="showPassword('#confirm-pin')"></i>
-                        <input type="password" placeholder="Re-enter New 6 digit Pin" id="confirm-pin">
-                     </div>
-                     <div class="text-lg-start text-center">
-                        <button type="submit" class="btn btn-orange px-5 mb-4 mt-5">Submit</button>
-                     </div>
-                  </form>
-               </div>
-            </div>
          </div>
       </div>
    </div>
