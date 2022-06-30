@@ -1,0 +1,117 @@
+.PendingSIPTransaction {
+
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #fff;
+        border-bottom: 4px solid #00599b;
+        z-index: 999;
+
+        .navbar-brand {
+            img {
+                max-width: 234px;
+                @media (max-width: 575px) {
+                    max-width: 150px;
+                }
+            }
+        }
+
+        .client-name {
+            font-size: 16px;
+            font-weight: 500;
+            color: $color-tilt;
+
+            @media (max-width: 575px) {
+               font-size: 14px;
+            }
+        }
+    }
+
+    &-content{
+        margin-top: 100px;
+        padding: 30px;
+        @media (max-width: 575px) {
+            margin-top: 90px;
+            padding: 15px;
+        }
+
+        // top badge design
+        .content-box > h1{ display: block; margin: 0 20px; padding: 10px 8px; color: #fff; position: absolute;left: 15px; top: -15px; text-transform: uppercase; font-size: 15px; line-height: 20px; z-index: 1; background: rgba(6,102,162,1);
+            background: -moz-linear-gradient(top, rgba(6,102,162,1) 0%, rgba(3,71,134,1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(6,102,162,1)), color-stop(100%, rgba(3,71,134,1)));
+            background: -webkit-linear-gradient(top, rgba(6,102,162,1) 0%, rgba(3,71,134,1) 100%);
+            background: -o-linear-gradient(top, rgba(6,102,162,1) 0%, rgba(3,71,134,1) 100%);
+            background: -ms-linear-gradient(top, rgba(6,102,162,1) 0%, rgba(3,71,134,1) 100%);
+            background: linear-gradient(to bottom, rgba(6,102,162,1) 0%, rgba(3,71,134,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0666a2', endColorstr='#034786', GradientType=0 );}
+            .content-box > h1:after,.content-box > h1:before{content: ""; z-index: -1; position: absolute; width: 20px; top: 0; bottom: 0; background: rgba(6,102,162,1);background: -moz-linear-gradient(top, rgba(6,102,162,1) 0%, rgba(3,71,134,1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(6,102,162,1)), color-stop(100%, rgba(3,71,134,1)));
+            background: -webkit-linear-gradient(top, rgba(6,102,162,1) 0%, rgba(3,71,134,1) 100%);
+            background: -o-linear-gradient(top, rgba(6,102,162,1) 0%, rgba(3,71,134,1) 100%);
+            background: -ms-linear-gradient(top, rgba(6,102,162,1) 0%, rgba(3,71,134,1) 100%);
+            background: linear-gradient(to bottom, rgba(6,102,162,1) 0%, rgba(3,71,134,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0666a2', endColorstr='#034786', GradientType=0 );}
+            .content-box > h1:after{ right: -12px; transform: skew(-15deg); border-radius:0 0 4px 0;}
+            .content-box > h1:before{ left: -12px; transform: skew(15deg); border-radius:0 0 0 4px;}
+            .content-box > h1 > em,.content-box > h1 > i{ display: block; position: absolute; z-index: -2; top: 0; height: 15px; width: 20px; background-color: #00284d;}
+            .content-box > h1 > em{right: -20px;transform: skew(15deg);}
+            .content-box > h1 > i{left: -20px;transform: skew(-15deg);}
+        // end of top badge css
+
+        .content-box {
+            box-shadow: 2px 2px 15px rgb(0 0 0 / 10%);
+            
+            .table {
+                width: 100%;
+                font-size: 14px;
+
+                @media (max-width: 575px) {
+                    font-size: 12px;
+                }
+
+                .bg-gray td {
+                    background-color: #f4f4f4;
+                    color: #000;
+                }
+            }
+
+            .payment-mode {
+                .heading {
+                    color: #00599b;
+                    text-align: center;
+                    padding-top: 20px;
+                    padding-bottom: 10px;
+                }
+
+                .tab-main {
+                    margin-bottom: 30px;
+
+                    .nav-pills{
+                        background-color: #EDEDED;
+                        width: 171px;
+                        margin: auto;
+                        border-radius: 30px;
+
+                        .nav-link {
+                            border-radius: 30px;
+                            color: #6A7EAE;
+
+                            &.active {
+                                background-color: #0667A2;
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    .tab-content {
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        
+        }
+    }
+}

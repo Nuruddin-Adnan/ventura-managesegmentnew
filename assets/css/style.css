@@ -183,12 +183,12 @@ body {
 }
 
 .btn-orange {
-  background: #fe6b31;
+  background: #F1592A;
   color: #fff;
 }
 .btn-orange:hover {
   color: #fff;
-  background: #fe5918;
+  background: #ef4612;
 }
 
 .btn-bank-proof {
@@ -750,6 +750,141 @@ label {
 }
 .login-registration.confirm-otp input::placeholder {
   border: none !important;
+}
+
+.PendingSIPTransaction .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 4px solid #00599b;
+  z-index: 999;
+}
+.PendingSIPTransaction .header .navbar-brand img {
+  max-width: 234px;
+}
+@media (max-width: 575px) {
+  .PendingSIPTransaction .header .navbar-brand img {
+    max-width: 150px;
+  }
+}
+.PendingSIPTransaction .header .client-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #016388;
+}
+@media (max-width: 575px) {
+  .PendingSIPTransaction .header .client-name {
+    font-size: 14px;
+  }
+}
+.PendingSIPTransaction-content {
+  margin-top: 100px;
+  padding: 30px;
+}
+@media (max-width: 575px) {
+  .PendingSIPTransaction-content {
+    margin-top: 90px;
+    padding: 15px;
+  }
+}
+.PendingSIPTransaction-content .content-box > h1 {
+  display: block;
+  margin: 0 20px;
+  padding: 10px 8px;
+  color: #fff;
+  position: absolute;
+  left: 15px;
+  top: -15px;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 20px;
+  z-index: 1;
+  background: rgb(6, 102, 162);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(6, 102, 162)), color-stop(100%, rgb(3, 71, 134)));
+  background: linear-gradient(to bottom, rgb(6, 102, 162) 0%, rgb(3, 71, 134) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#0666a2", endColorstr="#034786", GradientType=0 );
+}
+.PendingSIPTransaction-content .content-box > h1:after, .PendingSIPTransaction-content .content-box > h1:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 20px;
+  top: 0;
+  bottom: 0;
+  background: rgb(6, 102, 162);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(6, 102, 162)), color-stop(100%, rgb(3, 71, 134)));
+  background: linear-gradient(to bottom, rgb(6, 102, 162) 0%, rgb(3, 71, 134) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#0666a2", endColorstr="#034786", GradientType=0 );
+}
+.PendingSIPTransaction-content .content-box > h1:after {
+  right: -12px;
+  transform: skew(-15deg);
+  border-radius: 0 0 4px 0;
+}
+.PendingSIPTransaction-content .content-box > h1:before {
+  left: -12px;
+  transform: skew(15deg);
+  border-radius: 0 0 0 4px;
+}
+.PendingSIPTransaction-content .content-box > h1 > em, .PendingSIPTransaction-content .content-box > h1 > i {
+  display: block;
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  height: 15px;
+  width: 20px;
+  background-color: #00284d;
+}
+.PendingSIPTransaction-content .content-box > h1 > em {
+  right: -20px;
+  transform: skew(15deg);
+}
+.PendingSIPTransaction-content .content-box > h1 > i {
+  left: -20px;
+  transform: skew(-15deg);
+}
+.PendingSIPTransaction-content .content-box {
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.PendingSIPTransaction-content .content-box .table {
+  width: 100%;
+  font-size: 14px;
+}
+@media (max-width: 575px) {
+  .PendingSIPTransaction-content .content-box .table {
+    font-size: 12px;
+  }
+}
+.PendingSIPTransaction-content .content-box .table .bg-gray td {
+  background-color: #f4f4f4;
+  color: #000;
+}
+.PendingSIPTransaction-content .content-box .payment-mode .heading {
+  color: #00599b;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.PendingSIPTransaction-content .content-box .payment-mode .tab-main {
+  margin-bottom: 30px;
+}
+.PendingSIPTransaction-content .content-box .payment-mode .tab-main .nav-pills {
+  background-color: #EDEDED;
+  width: 171px;
+  margin: auto;
+  border-radius: 30px;
+}
+.PendingSIPTransaction-content .content-box .payment-mode .tab-main .nav-pills .nav-link {
+  border-radius: 30px;
+  color: #6A7EAE;
+}
+.PendingSIPTransaction-content .content-box .payment-mode .tab-main .nav-pills .nav-link.active {
+  background-color: #0667A2;
+  color: #fff;
+}
+.PendingSIPTransaction-content .content-box .payment-mode .tab-main .tab-content p {
+  font-size: 14px;
 }
 
 /*===// end of pages css === *//*# sourceMappingURL=style.css.map */
