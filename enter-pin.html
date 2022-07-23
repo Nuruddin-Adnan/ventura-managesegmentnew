@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>ventura | enter pin</title>
+   <title>ventura | Enter Pin</title>
    <link rel='shortcut icon' href='assets/images/logo.png' type='image/x-icon'>
    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
@@ -13,7 +13,8 @@
 </head>
 
 <body>
-   <div class="login-registration">
+   <!--###### Enter Pin start ######-->
+   <div class="login-registration position-relative  confirm-pin">
       <div class="contianer-fluid">
          <div class="login-registration--content position-relative">
             <img src="assets/images/login-registration/corner-dots-top-left.png" alt="dots-icon" class="dots-top-left">
@@ -24,29 +25,34 @@
             <img src="assets/images/login-registration/corner-dots-bottom-right.png" alt="dots-icon"
                class="dots-bottom-right">
 
-            <div class="text-lg-end text-center logo">
+            <div class="text-lg-end text-center logo pt-xxl-5 pt-lg-4">
                <a href="#"><img src="assets/images/logo-plan.png" alt="logo" class="img-fluid"></a>
             </div>
 
             <div class="row align-items-center min-h-inherit">
                <div class="col-lg-6 d-flex justify-content-center">
-                  <h1 class="text-nowrap heading-1">Enter Pin <img src="assets/images/login-registration/arrow-dots.png"
-                        alt="icon" class="img-fluid"></h1>
+                  <h1 class="heading-1">Enter Pin <img src="assets/images/login-registration/arrow-dots.png" alt="icon"
+                        class="img-fluid"></h1>
                </div>
                <div class="col-lg-6">
                   <form class="form mt-lg-0 mt-5">
-                     <h3 class="heading-2 mb-5 text-lg-start text-center">Hi Shashank</h3>
-                     <div class="position-relative">
-                        <i class="fas fa-eye-slash show-password-btn" onclick="showPassword('input')"></i>
-                        <input type="password" placeholder="Enter 4 digit Pin" pattern="[0-9]{4,4}"
-                           title="Please Enter 4 digit Pin">
+                     <div class="mt-lg-5 mt-4 mb-xxl-5 mb-4 text-lg-start text-center">
+                        <h3 class="heading-2 mb-1">Hi Shashank</h3>
                      </div>
-                     <div class="d-flex align-items-center justify-content-between mt-2">
-                        <a href="#" class="text-orange"><em>Switch Account</em></a>
-                        <a href="#" class="text-orange"><em>Forgot Pin</em></a>
+
+                     <label>Enter 4 digit Pin</label>
+                     <div class="d-flex align-items-center justify-content-center mb-3 otp position-relative">
+                        <i class="fas fa-eye-slash show-password-btn" onclick="showPasswordAll('.enter-pin')"></i>
+                        <input type="password" placeholder="" class="text-center enter-pin me-3" maxlength="1"
+                           id="first">
+                        <input type="password" placeholder="" class="text-center enter-pin me-3" maxlength="1"
+                           id="second">
+                        <input type="password" placeholder="" class="text-center enter-pin me-3" maxlength="1"
+                           id="third">
+                        <input type="password" placeholder="" class="text-center enter-pin" maxlength="1" id="fourth">
                      </div>
-                     <div class="text-lg-start text-center">
-                        <button type="submit" class="btn btn-orange px-5 my-4">Submit</button>
+                     <div class="text-lg-start text-center pt-4">
+                        <button type="submit" class="btn btn-orange px-5 mb-4">Submit</button>
                      </div>
                   </form>
                </div>
@@ -54,8 +60,23 @@
          </div>
       </div>
    </div>
+   <!--###### Enter Pin end ######-->
 
+   <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
    <script src="assets/js/custom.js"></script>
+   <script>
+      // input type password to text ************
+      function showPasswordAll(inputClass) {
+         const inputs = document.querySelectorAll(inputClass);
+         [...inputs].forEach(input => {
+            if (input.type === "password") {
+               input.type = "text";
+            } else {
+               input.type = "password";
+            }
+         })
+      }
+   </script>
 </body>
 
 </html>

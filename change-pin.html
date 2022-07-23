@@ -14,7 +14,7 @@
 
 <body>
    <!--###### change pin start ######-->
-   <div class="login-registration position-relative">
+   <div class="login-registration position-relative  confirm-pin">
       <div class="contianer-fluid">
          <div class="login-registration--content position-relative">
             <img src="assets/images/login-registration/corner-dots-top-left.png" alt="dots-icon" class="dots-top-left">
@@ -38,26 +38,44 @@
                   <form class="form mt-lg-0 mt-5">
                      <div class="mt-lg-5 mt-4 mb-xxl-4 mb-3 text-lg-start text-center">
                         <h3 class="heading-2 mb-1">Hi Shashank</h3>
-                        <p>Reset your Pin</p>
+                        <h5 class="fw-normal">Reset your Pin</h5>
                      </div>
-                     <div class="position-relative mb-4">
-                        <i class="fas fa-eye-slash show-password-btn" onclick="showPassword('input#password')"></i>
-                        <input type="password" placeholder="Enter old Pin" id="password" pattern="[0-9]{4,4}"
-                           title="Please Enter 4 digit Pin">
+
+                     <label>Enter Old Pin</label>
+                     <div class="d-flex align-items-center justify-content-center mb-3 otp position-relative">
+                        <i class="fas fa-eye-slash show-password-btn" onclick="showPasswordAll('.old-pin')"></i>
+                        <input type="password" placeholder="" class="text-center old-pin me-3" maxlength="1" id="first">
+                        <input type="password" placeholder="" class="text-center old-pin me-3" maxlength="1"
+                           id="second">
+                        <input type="password" placeholder="" class="text-center old-pin me-3" maxlength="1" id="third">
+                        <input type="password" placeholder="" class="text-center old-pin" maxlength="1" id="fourth">
                      </div>
-                     <div class="position-relative mb-4">
-                        <i class="fas fa-eye-slash show-password-btn"
-                           onclick="showPassword('input#confirm-password')"></i>
-                        <input type="password" placeholder="Enter New 4 digit Pin" id="confirm-password"
-                           pattern="[0-9]{4,4}" title="Please Enter 4 digit Pin">
+
+                     <label>Enter New Pin</label>
+                     <div class="d-flex align-items-center justify-content-center mb-3 otp position-relative">
+                        <i class="fas fa-eye-slash show-password-btn" onclick="showPasswordAll('.new-pin')"></i>
+                        <input type="password" placeholder="" class="text-center new-pin me-3" maxlength="1"
+                           id="first-2">
+                        <input type="password" placeholder="" class="text-center new-pin me-3" maxlength="1"
+                           id="second-2">
+                        <input type="password" placeholder="" class="text-center new-pin me-3" maxlength="1"
+                           id="third-2">
+                        <input type="password" placeholder="" class="text-center new-pin" maxlength="1" id="fourth-2">
                      </div>
-                     <div class="position-relative mb-5">
-                        <i class="fas fa-eye-slash show-password-btn"
-                           onclick="showPassword('input#reconfirm-password')"></i>
-                        <input type="password" placeholder="Re-enter New 4 digit Pin" id="reconfirm-password"
-                           pattern="[0-9]{4,4}" title="Please Enter 4 digit Pin">
+
+                     <label>Re-Enter New Pin</label>
+                     <div class="d-flex align-items-center justify-content-center mb-3 otp position-relative">
+                        <i class="fas fa-eye-slash show-password-btn" onclick="showPasswordAll('.re-enter-pin')"></i>
+                        <input type="password" placeholder="" class="text-center re-enter-pin me-3" maxlength="1"
+                           id="first-3">
+                        <input type="password" placeholder="" class="text-center re-enter-pin me-3" maxlength="1"
+                           id="second-3">
+                        <input type="password" placeholder="" class="text-center re-enter-pin me-3" maxlength="1"
+                           id="third-3">
+                        <input type="password" placeholder="" class="text-center re-enter-pin" maxlength="1"
+                           id="fourth-3">
                      </div>
-                     <div class="text-lg-start text-center pt-xxl-3">
+                     <div class="text-lg-start text-center pt-4">
                         <button type="submit" class="btn btn-orange px-5 mb-4">Submit</button>
                      </div>
                   </form>
@@ -70,6 +88,19 @@
 
    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
    <script src="assets/js/custom.js"></script>
+   <script>
+      // input type password to text ************
+      function showPasswordAll(inputClass) {
+         const inputs = document.querySelectorAll(inputClass);
+         [...inputs].forEach(input => {
+            if (input.type === "password") {
+               input.type = "text";
+            } else {
+               input.type = "password";
+            }
+         })
+      }
+   </script>
 </body>
 
 </html>

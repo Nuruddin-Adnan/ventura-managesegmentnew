@@ -585,6 +585,18 @@ label {
 .login-registration--content .form input::placeholder {
   border-bottom: none;
 }
+.login-registration--content .form input[type=password]::-moz-placeholder {
+  font-family: Verdana;
+  letter-spacing: 0.125em;
+}
+.login-registration--content .form input[type=password]:-ms-input-placeholder {
+  font-family: Verdana;
+  letter-spacing: 0.125em;
+}
+.login-registration--content .form input[type=password], .login-registration--content .form input[type=password]::placeholder {
+  font-family: Verdana;
+  letter-spacing: 0.125em;
+}
 .login-registration--content .form .sign-up-link {
   font-size: 18px;
   font-weight: 400;
